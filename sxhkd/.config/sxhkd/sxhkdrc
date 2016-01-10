@@ -1,0 +1,87 @@
+#!/bin/sh
+# Exit BSPWM
+super + alt + Escape
+	bspc quit
+
+# Close window
+super + q
+	bspc window -c
+
+# Kill window
+super + shift + q
+	bspc window -k
+
+# Change desktop
+super + {1-5}
+	bspc desktop -f {1-5}
+
+# Send focused window to desktop
+super + shift + {1-5}
+	bspc window -d {1-5}
+
+# Swap current window with largest
+super + m
+	bspc window -s biggest
+
+# Fullscreen window
+super + shift + f
+	bspc window -t fullscreen
+
+# Floating window
+super + f
+	bspc window -t floating
+
+# Focus next window
+super + Tab
+	bspc window -f next
+
+# Focus previous window
+super + shift + Tab
+	bspc window -f prev
+
+# Focus directionally
+alt + {h, j, k, l}
+	bspc window -f {left, right, up, down}
+
+# move windows
+super + {h, j, k, l}
+	wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+# Resize windows
+super + alt {h, j, k, l}
+	wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+# Balance windows
+super + b
+	bspc desktop -B
+
+# Reset split ratio
+super + e
+	bspc desktop -E
+
+# Circulate leaves of tree
+super + c
+	bspc desktop -C forward
+
+super + shift + c
+	bspc desktop -C backward
+
+# Switch from tiled to floating / vice versa
+super + t
+	bspc desktop -l tiled
+
+super + r
+	bspc desktop -R 90
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Applications
+# Open terminal
+super + Return
+	urxvt
+
+# Launch rofi
+super + space
+	rofi -show run
