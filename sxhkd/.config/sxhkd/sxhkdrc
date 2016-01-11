@@ -41,7 +41,7 @@ super + shift + Tab
 
 # Focus directionally
 alt + {h, j, k, l}
-	bspc window -f {left, right, up, down}
+	bspc window -f {left, down, up, right}
 
 # move windows
 super + {h, j, k, l}
