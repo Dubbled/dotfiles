@@ -13,7 +13,8 @@ env() {
 	bar &
 }
 run() {
-	exec bspwm
+	bspwm &
+	exec startxfce4
 }
 graphics
 env
