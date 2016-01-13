@@ -2,12 +2,13 @@
 
 graphics() {
 	xrdb -load ~/.Xresources
-	hsetroot -fill .wallpaper.jpg
+	hsetroot -tile .wallpaper.png
 	xset +fp ~/.fonts
 }
 
 env() {
 	compton --config ~/.config/compton/config -b
+	rmdesk &
 	sxhkd &
 	bar &
 }

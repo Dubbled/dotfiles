@@ -24,11 +24,14 @@ super + m
 	bspc window -s biggest
 
 # Fullscreen window
-super + shift + f
+super + f
 	bspc window -t fullscreen
 
+super + p
+	bspc window -t pseudo_tiled
+
 # Floating window
-super + f
+super + t
 	bspc window -t floating
 
 # Focus next window
@@ -40,16 +43,8 @@ super + shift + Tab
 	bspc window -f prev
 
 # Focus directionally
-alt + {h, j, k, l}
-	bspc window -f {left, down, up, right}
-
-# move windows
 super + {h, j, k, l}
-	wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
-
-# Resize windows
-super + alt {h, j, k, l}
-	wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+	bspc window -f {left, down, up, right}
 
 # Balance windows
 super + b
@@ -72,6 +67,9 @@ super + t
 
 super + r
 	bspc desktop -R 90
+
+super + g
+	bspc desktop -l next
 
 ~button1
    bspc pointer -g focus

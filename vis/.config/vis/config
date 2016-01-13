@@ -9,7 +9,7 @@ visualizer.spectrum.smoothing.mode=none
 ##vis tries to find the correct pulseaudio sink, however this will not work on all systems.
 ##If pulse audio is not working with vis try switching the audio source. A list can be found by running the
 ##command pacmd list-sinks  | grep -e 'name:'  -e 'index'
-audio.pulse.source=1
+audio.pulse.source=3
 
 ##Defaults to "/tmp/mpd.fifo"
 #mpd.fifo.path=/tmp/mpd.fifo
@@ -82,4 +82,4 @@ audio.pulse.source=1
 #visualizer.lorenz.character=#
 
 ##Specifies the color scheme. The color scheme must be in ~/.config/vis/colors/ directory. The default scheme is "colors".
-colors.scheme=rainbow
+colors.scheme=colors
