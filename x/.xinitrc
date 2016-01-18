@@ -10,11 +10,10 @@ env() {
 	compton --config ~/.config/compton/config -b
 	rmdesk &
 	sxhkd &
-	bar &
+	runbar &
 }
 run() {
-	bspwm &
-	exec startxfce4
+	exec bspwm
 }
 graphics
 env
