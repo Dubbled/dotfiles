@@ -2,7 +2,7 @@
 
 graphics() {
 	xrdb -load ~/.Xresources
-	hsetroot -tile .wallpaper.png
+	hsetroot -tile .wallpaper.jpg
 	xset +fp ~/.fonts
 }
 
@@ -13,7 +13,8 @@ env() {
 	runbar &
 }
 run() {
-	exec bspwm
+	bspwm &
+	exec startxfce4
 }
 graphics
 env
