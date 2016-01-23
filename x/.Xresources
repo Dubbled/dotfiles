@@ -34,6 +34,6 @@
 ! white
 *.color7:       #d3d0c8
 *.color15:      #f2f0ec
-
+URxvt.font: xft:lemon:size=10
 URxvt.scrollBar: false
 URxvt.internalBorder: 10

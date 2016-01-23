@@ -2,19 +2,17 @@
 
 graphics() {
 	xrdb -load ~/.Xresources
-	hsetroot -tile .wallpaper.jpg
-	xset +fp ~/.fonts
+	hsetroot -tile .tile.jpg
+	xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
 }
 
 env() {
 	compton --config ~/.config/compton/config -b
-	rmdesk &
 	sxhkd &
-	runbar &
 }
 run() {
-	bspwm &
-	exec startxfce4
+	runbar | sh &
+	exec bspwm
 }
 graphics
 env
