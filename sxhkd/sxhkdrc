@@ -91,7 +91,6 @@ super + Escape
 super + Return
 	urxvt
 
-# Launch rofi
 super + space
-	rofi -show run
+	menu
 
