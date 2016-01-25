@@ -2,7 +2,7 @@
 
 graphics() {
 	xrdb -load ~/.Xresources
-	hsetroot -tile .tile.jpg
+	hsetroot -fill ~/Pictures/chicago.jpg -blur 8
 	xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
 }
 
@@ -12,7 +12,8 @@ env() {
 }
 run() {
 	runbar | sh &
-	exec bspwm
+	bspwm &
+	exec xfce4-session
 }
 graphics
 env

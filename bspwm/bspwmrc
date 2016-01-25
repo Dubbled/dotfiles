@@ -22,3 +22,4 @@ bspc config focus_by_distance false
 
 bspc monitor -d 1 2 3 4 5
 bspc rule -a bar state=locked follow=on
+bspc rule -a urxvt floating=on

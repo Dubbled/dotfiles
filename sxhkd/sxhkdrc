@@ -56,10 +56,10 @@ super + e
 
 # Circulate leaves of tree
 super + c
-	bspc desktop -C forward
+	bspc desktop -f forward
 
 super + shift + c
-	bspc desktop -C backward
+	bspc desktop -f backward
 
 # Switch from tiled to floating / vice versa
 super + t
@@ -74,12 +74,14 @@ super + g
 ~button1
 	bspc pointer -g focus
 
-# start move/resize
-super + button{1-3}
-	bspc pointer -g {move,resize_side,resize_corner}
+super + button1
+	bspc pointer -g focus; xmmv
 
-super + @button{1-3}
-	bspc pointer -u
+super + @button1
+	pkill xmmv
+
+@button1
+	pkill xmmv
 
 # make sxhkd reload its configuration files:
 super + Escape
