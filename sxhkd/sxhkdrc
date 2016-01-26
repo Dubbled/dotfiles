@@ -1,93 +1,28 @@
 #!/bin/sh
-# Exit BSPWM
 super + alt + Escape
-	bspc quit
+	pkill xwait
 
-# Close window
 super + q
-	bspc window -c
+	killw $(pfw)	
 
-# Kill window
-super + shift + q
-	bspc window -k
-
-# Change desktop
-super + {1-5}
-	bspc desktop -f {1-5}
-
-# Send focused window to desktop
-super + shift + {1-5}
-	bspc window -d {1-5}
-
-# Swap current window with largest
-super + m
-	bspc window -s biggest
-
-# Fullscreen window
-super + f
-	bspc window -t fullscreen
-
-super + p
-	bspc window -t pseudo_tiled
-
-# Floating window
-super + t
-	bspc window -t floating
-
-# Focus next window
-super + Tab
-	bspc window -f next
-
-# Focus previous window
-super + shift + Tab
-	bspc window -f prev
-
-# Focus directionally
 super + {h, j, k, l}
-	bspc window -f {left, down, up, right}
+	wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
 
-# Balance windows
-super + b
-	bspc desktop -B
+super + alt + {h, j, k, l}
+	wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
 
-# Reset split ratio
-super + e
-	bspc desktop -E
-
-# Circulate leaves of tree
 super + c
-	bspc desktop -f forward
+	cornerw md $(pfw)
 
-super + shift + c
-	bspc desktop -f backward
+super + Tab
+	focuswrap next
 
-# Switch from tiled to floating / vice versa
-super + t
-	bspc desktop -l tiled
+super + shift + Tab
+	focuswrap prev
 
-super + r
-	bspc desktop -R 90
-
-super + g
-	bspc desktop -l next
-
-~button1
-	bspc pointer -g focus
-
-super + button1
-	bspc pointer -g focus; xmmv
-
-super + @button1
-	pkill xmmv
-
-@button1
-	pkill xmmv
-
-# make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# Open terminal
 super + Return
 	urxvt
 
