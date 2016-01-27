@@ -32,7 +32,6 @@ class WS(Widget):
 			else:
 				color = '#d3d0c8'
 			self.switcher += self.fg(color, '%{A:bspc desktop -f ' + workspace + ':}' + self.icon + '%{A}')
-			self.switcher += ' '
 	def render(self):
 		return self.switcher
 

@@ -12,10 +12,8 @@ env() {
 }
 run() {
 	runbar | sh &
-	#bspwm &
-	#exec xfce4-session
-	wew | evhandle &
-	exec xwait
+	bspwm &
+	exec xfce4-session
 }
 graphics
 env
