@@ -26,6 +26,7 @@ super + Escape
 super + Return
 	urxvt
 
+# Launch rofi
 super + space
-	menu
+	rofi -show run
 
