@@ -3,7 +3,7 @@
 graphics() {
 	xrdb -load ~/.Xresources
 	xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
-	hsetroot -tile ~/.tile.jpg
+	hsetroot -fill ~/Pictures/snow.jpg -blur 3
 }
 
 env() {
@@ -11,8 +11,8 @@ env() {
 	sxhkd -c ~/.config/sxhkd/sxhkdrc &
 }
 run() {
-	runbar &
-	exec openbox
+	runbar | sh &
+	exec bspwm
 }
 graphics
 env
