@@ -48,7 +48,7 @@ line = ''
 cl = Clock()
 ws = WS()
 mu = Music()
-widgets = [mu, '%{c}', ws, '%{r}', cl]
+widgets = [mu, '%{c}', '%{r}', cl]
 for widget in widgets:
 	line += ' '
 	if isinstance(widget, Widget):

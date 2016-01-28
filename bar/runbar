@@ -1,4 +1,4 @@
 #!/bin/sh
 while :; do
 	bar
-done | lemonbar -F'#D3D0C8' -B'#2D2D2D' -f lemon:size=16- -f FontAwesome:size=10 -g 1520x20+200+0 -o -3
+done | lemonbar -F'#D3D0C8' -B'#2D2D2D' -f lemon:size=16 -f FontAwesome:size=8 -o -3 -g 1920x20 | sh

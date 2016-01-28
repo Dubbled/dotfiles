@@ -2,18 +2,17 @@
 
 graphics() {
 	xrdb -load ~/.Xresources
-	hsetroot -fill ~/Pictures/chicago.jpg -blur 8
 	xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
+	hsetroot -tile ~/.tile.jpg
 }
 
 env() {
-	compton --config ~/.config/compton/config -b
-	sxhkd &
+	compton -b --vsync opengl --config ~/.config/compton/config
+	sxhkd -c ~/.config/sxhkd/sxhkdrc &
 }
 run() {
-	runbar | sh &
-	bspwm &
-	exec xfce4-session
+	runbar &
+	exec openbox
 }
 graphics
 env

@@ -1,2 +1,2 @@
 #/bin/sh
-dmenu_run -fn 'lemon-10' -sf '#d3d0c8' -sb '#66cccc' -w 320 -x 800 -y 400 -h 50
+dmenu_run -fn 'lemon-10' -sf '#d3d0c8' -sb '#cc99cc' -w 320 -x 800 -y 400 -h 25 -l 5 -p "Run >"
