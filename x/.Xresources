@@ -1,4 +1,4 @@
-#include ".colors/mattd"
+#include ".colors/bulb"
 
 URxvt.geometry: 80x14
 URxvt.font: xft:lemon:size=10
