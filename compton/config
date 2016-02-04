@@ -74,4 +74,5 @@ glx-swap-method = "undefined";
 wintypes:
 {
   tooltip = { fade = true; shadow = false; opacity = 0.75; focus = true; };
+
 };

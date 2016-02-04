@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
+. $HOME/.bin/colr
+
 while :; do
 	bar
-done | lemonbar -F'#D3D0C8' -B'#2D2D2D' -f lemon:size=16 -f FontAwesome:size=8 -o -3 -g 1920x20
+done | lemonbar -F"#$fg" -B"#$bg" -n bar -f lemon:size=16 -f FontAwesome:size=8 -o -3 -g 1620x25+150+10

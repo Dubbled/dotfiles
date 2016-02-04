@@ -2,6 +2,9 @@
 super + alt + Escape
 	pkill xwait
 
+super + {t, f, p}
+	bspc window -t {floating, fullscreen, sticky}
+
 super + q
 	killw $(pfw)	
 
@@ -14,17 +17,32 @@ super + alt + {h, j, k, l}
 super + c
 	cornerw md $(pfw)
 
-super + Tab
-	focuswrap next
+super + m
+	bspc window -s biggest
 
-super + shift + Tab
-	focuswrap prev
-
-super + Escape
-	pkill -USR1 -x sxhkd
+super + {_,shift} + Tab
+	bspc window -f {prev, next}
 
 super + Return
 	urxvt
 
 super + space
 	menu
+
+~button1
+	bspc pointer -g focus
+
+super + !button{1-3}
+	bspc pointer -g {move,resize_side,resize_corner}
+
+super + @button{1-3}
+	bspc pointer -u
+
+super + {1-5}
+	bspc desktop -f {I, II, III, IV, V}
+
+super + shift + {1-5}
+	bspc window -d {I, II, III, IV, V}
+
+alt + {minus, equal}
+	bspc config -d focuwed window_gap $((`bspc config -d focused window_gap ` {+, -} 2 ))

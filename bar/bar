@@ -1,59 +1,32 @@
-#!/usr/bin/env python
+#!/bin/bash
 
-import subprocess, time
+. $HOME/.bin/colr
+SEP="    "
+Clock() {
+	echo "%{B#$red}%{F#$blk}$SEP$(date +%r)$SEP%{F-}%{B-}"
+}
 
-def run(cmd):
-	try:
-		return subprocess.getoutput(cmd)
-	except:
-		return None
+WS() {
+	currentDesktop=$(bspc query -D -d)
+	switcher=""
+	for desktop in $(bspc query -D); do
+		if [[ $desktop = $currentDesktop ]]; then
+			switcher="$switcher%{F#$blk}%{F-}"
+		elif [[ $(bspc query -W -d "$desktop" | wc -l) -gt 0 ]]; then
+			switcher="$switcher%{F#$mag}%{F-}"
+		else
+			switcher="$switcher%{F#$wht}%{F-}"
+		fi
+	done
+	echo "%{B#$red}$SEP$SEP$switcher$SEP$SEP%{B-}"
+}
 
+Weather() {
+	echo $(weather-report 47906 | grep Temperature:)
+}
 
-class Widget:
-	def fg(self, color, text):
-		return '%{F' + color + '}' + text + '%{F-}'
+Name() {
+	echo "%{F#$blk}%{B#$red}$SEP$(whoami)@$(hostname)$SEP%{B-}%{F-}"
+}
 
-	def bg(self, color, text):
-		return '%{B' + color + '}' + text + '%{B-}'
-
-
-class Clock(Widget):
-	def render(self):
-		return run('date +%r')
-
-class WS(Widget):
-	def __init__(self):
-		self.workspaces = run('bspc query -D').split('\n')
-		self.switcher = ''
-		self.icon = ''
-		for workspace in self.workspaces:
-			if workspace == run('bspc query -D -d'):
-				color = '#66cccc'
-			else:
-				color = '#d3d0c8'
-			self.switcher += self.fg(color, '%{A:bspc desktop -f ' + workspace + ':}' + self.icon + '%{A}')
-	def render(self):
-		return self.switcher
-
-class Music(Widget):
-	def __init__(self):
-		self.forward = '  '
-		self.back = '  '
-		self.play = '  '
-		self.pause = '  '
-	def render(self):
-		return '%{A:mpc prev:}' + self.back + '%{A}%{A:mpc play:}' + self.play + '%{A}%{A:mpc pause:}' + self.pause + '%{A}%{A:mpc next:}' + self.forward + '%{A}'
-		
-line = ''
-cl = Clock()
-ws = WS()
-mu = Music()
-widgets = [mu, '%{c}', '%{r}', cl]
-for widget in widgets:
-	line += ' '
-	if isinstance(widget, Widget):
-		line += widget.render()
-	else:
-		line += widget
-	line += ' '
-print(line)
+echo "$(Name)%{c}$(WS)%{r}$(Clock)"

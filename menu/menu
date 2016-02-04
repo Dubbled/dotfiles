@@ -1,2 +1,4 @@
-#/bin/sh
-dmenu_run -fn 'lemon-10' -sf '#2d2d2d' -sb '#f2777a' -w 720 -x 600 -y 400 -h 25 -l 5 -p "Run >"
+#/bin/bash
+
+. $HOME/.bin/colr
+dmenu_run -fn 'lemon-10' -sf "#$blk" -sb "#$red" -w 720 -x 600 -y 400 -h 25 -l 5 -p "Run >"

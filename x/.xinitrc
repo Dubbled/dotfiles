@@ -3,7 +3,7 @@
 graphics() {
 	xrdb -load ~/.Xresources
 	xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
-	hsetroot -fill ~/Pictures/snow.jpg -blur 3
+	hsetroot -fill .wall.jpg
 }
 
 env() {
@@ -11,8 +11,11 @@ env() {
 	sxhkd -c ~/.config/sxhkd/sxhkdrc &
 }
 run() {
-	runbar | sh &
-	exec bspwm
+	runbar &
+	bspwm &
+	exec xfce4-session
+	#exec swm
+	#exec herbstluftwm
 }
 graphics
 env
