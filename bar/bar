@@ -2,8 +2,9 @@
 
 . $HOME/.bin/colr
 SEP="    "
+SEP2="  "
 Clock() {
-	echo "%{B#$cyn}%{F#$blk}$SEP$(date +%r)$SEP%{F-}%{B-}"
+	echo "%{A:pkill xinit:}%{+u}%{U#$cyn}$SEP$(date +%c)$SEP%{U-}%{-u}%{A}"
 }
 
 WS() {
@@ -11,28 +12,57 @@ WS() {
 	switcher=""
 	for desktop in $(bspc query -D); do
 		if [[ $desktop = $currentDesktop ]]; then
-			switcher="$switcher%{F#$cyn}  %{F-}"
+			switcher="$switcher%{F#$cyn}%{+u}%{U#$cyn}$SEP2  $SEP2%{U-}%{-u}%{F-}"
 		elif [[ $(bspc query -W -d "$desktop" | wc -l) -gt 0 ]]; then
-			switcher="$switcher%{A:bspc desktop -f $desktop:}  %{A}"
+			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
 		else
-			switcher="$switcher%{A:bspc desktop -f $desktop:}  %{A}"
+			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
 		fi
 	done
 	echo "$switcher"
+}
+
+Todo() {
+	echo "%{A:urxvt -e vim .todo:}%{F#$cyn} %{F-}$(cat .todo | wc -l)%{A}"
+}
+
+Track() {
+	if [[ $(mpc | grep playing) != "" ]]; then
+		prefix="%{+u}%{U#$cyn}%{A:mpc pause:}  "
+	else
+		prefix="%{A:mpc play:}  "
+	fi
+		
+	echo "$prefix$SEP2$(mpc | grep -)%{A}%{-u}%{U-}"
+}
+
+Node() {
+	status=1
+	ping -c 1 104.131.33.121 || status=0
+	if [[ status = 1 ]]; then
+		color="#$grn"
+	else
+		color="#$red"
+	fi
+	echo "%{F$color}  %{F-}"
+}
+
+IPFS() {
+	peers=$(ipfs swarm peers | wc -l)
+	echo "%{F#$cyn}  %{F-}$peers"
 }
 
 Weather() {
 	echo $(weather-report 47906 | grep Temperature:)
 }
 
-Status() {
-	uptime=$(pacman -Q | wc -l)
-	mpdvol=$(mpc | grep volume)
-	echo " $uptime"
+Packages() {
+	packages=$(pacman -Q | wc -l)
+	echo "%{F#$cyn} %{F-}$packages"
 }
 
 Name() {
-	echo "%{F#$blk}%{B#$cyn}$SEP$(whoami)@$(hostname)$SEP%{B-}%{F-}"
+	echo "$SEP$(whoami)@$(hostname)$SEP"
 }
 
-echo "%{B#$bg}%{F#$fg}$(Name)%{c}$(WS)%{r}$(Status)$SEP$(Clock)%{F-}%{B-}"
+echo "%{B#$bg}%{F#$fg}$SEP$(WS)${B#$bg}%{c}%{B-}$(Track)%{r}$(Todo)$SEP$(IPFS)$SEP$(Packages)$SEP$(Clock)%{F-}%{B-}"

@@ -1,10 +1,14 @@
 #include ".colors/bulb"
 
-URxvt.geometry: 80x14
-URxvt.font: xft:lemon:size=10
-URxvt.scrollBar: false
-URxvt.internalBorder: 10
+st.geometry: 80x14
+st.font: lemon:size=8
+st.letterSpace: -2
 
+URxvt.geometry: 80x14
+URxvt.font: xft:lemon:size=8
+URxvt.letterSpace: 0
+URxvt.internalBorder: 15
+URxvt.scrollBar: none
 
 ! Colors
 *background:   bg
