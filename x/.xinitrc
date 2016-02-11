@@ -3,7 +3,7 @@
 graphics() {
 	xrdb -load ~/.Xresources
 	xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
-	hsetroot -fill .wall3.jpg # -blur 9
+	hsetroot -fill .chicago.jpg # -blur 9
 }
 
 env() {
@@ -13,9 +13,6 @@ env() {
 run() {
 	runbar &
 	exec bspwm
-	#exec herbstluftwm
-	#wew | yawee &
-	#exec xwait
 }
 graphics
 env

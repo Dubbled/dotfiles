@@ -2,7 +2,7 @@
 
 . $HOME/.bin/colr
 
-bspc config border_width       2
+bspc config border_width       3
 bspc config window_gap         20
 bspc config top_padding	30
 
@@ -11,8 +11,8 @@ bspc config borderless_monocle  true
 bspc config gapless_monocle     true
 bspc config focus_by_distance   true
 bspc config focused_border_color "#$cyn"
-bspc config active_border_color "#$fg"
-bspc config normal_border_color "#$fg"
+bspc config active_border_color "#$bblk"
+bspc config normal_border_color "#$bblk"
 bspc config normal_locked_border_color "#$fg"
 bspc config focused_sticky_border_color "#$mag"
 bspc config active_sticky_border_color '#cc99cc'

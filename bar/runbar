@@ -4,4 +4,4 @@
 
 while :; do
 	bar
-done | lemonbar -F"#$fg" -B"#$bg" -n bar -f FontAwesome:size=8 -f lemon:size=8 -o 1 -g 1920x25+0+0 -u 3 | sh
+done | lemonbar -F"#$fg" -B"#$bg" -n bar -f FontAwesome:size=6 -f lemon:size=8 -g 1920x25+0+0 -u 3 | sh

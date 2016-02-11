@@ -23,17 +23,17 @@ WS() {
 }
 
 Todo() {
-	echo "%{A:urxvt -e vim .todo:}%{F#$cyn} %{F-}$(cat .todo | wc -l)%{A}"
+	echo "%{A:todo:}%{F#$cyn} %{F-}$(cat .todo | wc -l)%{A}"
 }
 
 Track() {
 	if [[ $(mpc | grep playing) != "" ]]; then
-		prefix="%{+u}%{U#$cyn}%{A:mpc pause:}  "
+		prefix="%{A2:mpc next:}%{A3:plst:}%{+u}%{U#$cyn}%{A:mpc pause:}  "
 	else
-		prefix="%{A:mpc play:}  "
+		prefix="%{A2:mpc next:}%{A3:plst:}%{A:mpc play:}  "
 	fi
 		
-	echo "$prefix$SEP2$(mpc | grep -)%{A}%{-u}%{U-}"
+	echo "$prefix$SEP2$(mpc | grep -)%{A}%{A}%{A}%{-u}%{U-}"
 }
 
 Node() {
