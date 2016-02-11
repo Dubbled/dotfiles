@@ -13,7 +13,7 @@ WS() {
 	for desktop in $(bspc query -D); do
 		if [[ $desktop = $currentDesktop ]]; then
 			switcher="$switcher%{F#$cyn}%{+u}%{U#$cyn}$SEP2  $SEP2%{U-}%{-u}%{F-}"
-		elif [[ $(bspc query -W -d "$desktop" | wc -l) -gt 0 ]]; then
+		elif [[ $(bspc query -N -d "$desktop" | wc -l) -gt 0 ]]; then
 			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
 		else
 			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
