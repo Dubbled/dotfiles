@@ -1,0 +1,3 @@
+#!/bin/sh
+. $HOME/.bin/colr
+cat ~/.todo | dmenu -fn 'lemon-8' -sf "#$blk" -sb "#$cyn" -w 920 -x 500 -y 400 -h 25 -l 5 -p "Todo:"
