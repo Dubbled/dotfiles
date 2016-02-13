@@ -4,31 +4,29 @@
 SEP="    "
 SEP2="  "
 Clock() {
-	echo "%{A:pkill xinit:}%{+u}%{U#$cyn}$SEP$(date +%c)$SEP%{U-}%{-u}%{A}"
+	echo "%{A:pkill xinit:}%{+u}%{U#$fg}$SEP$(date +%c)$SEP%{U-}%{-u}%{A}"
 }
 
 WS() {
-	currentDesktop=$(bspc query -D -d)
+	currentDesktop=$(xdotool get_desktop)
 	switcher=""
-	for desktop in $(bspc query -D); do
+	for desktop in $(echo "0 1 2 3 4" | tr " " "\n"); do
 		if [[ $desktop = $currentDesktop ]]; then
-			switcher="$switcher%{F#$cyn}%{+u}%{U#$cyn}$SEP2  $SEP2%{U-}%{-u}%{F-}"
-		elif [[ $(bspc query -N -d "$desktop" | wc -l) -gt 0 ]]; then
-			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
+			switcher="$switcher%{F#$fg}%{+u}%{U#$fg}$SEP2  $SEP2%{U-}%{-u}%{F-}"
 		else
-			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
+			switcher="$switcher%{A:xdotool set_desktop $desktop:}$SEP2  $SEP2%{A}"
 		fi
 	done
 	echo "$switcher"
 }
 
 Todo() {
-	echo "%{A:todo:}%{F#$cyn} %{F-}$(cat .todo | wc -l)%{A}"
+	echo "%{A:todo:}%{F#$fg} %{F-}$(cat .todo | wc -l)%{A}"
 }
 
 Track() {
 	if [[ $(mpc | grep playing) != "" ]]; then
-		prefix="%{A2:mpc next:}%{A3:plst:}%{+u}%{U#$cyn}%{A:mpc pause:}  "
+		prefix="%{A2:mpc next:}%{A3:plst:}%{+u}%{U#$fg}%{A:mpc pause:}  "
 	else
 		prefix="%{A2:mpc next:}%{A3:plst:}%{A:mpc play:}  "
 	fi
@@ -49,7 +47,7 @@ Node() {
 
 IPFS() {
 	peers=$(ipfs swarm peers | wc -l)
-	echo "%{F#$cyn}  %{F-}$peers"
+	echo "%{F#$fg}  %{F-}$peers"
 }
 
 Weather() {
@@ -58,7 +56,7 @@ Weather() {
 
 Packages() {
 	packages=$(pacman -Q | wc -l)
-	echo "%{F#$cyn} %{F-}$packages"
+	echo "%{F#$fg} %{F-}$packages"
 }
 
 Name() {

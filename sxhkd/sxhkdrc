@@ -11,6 +11,9 @@ super + {t, s, f, p}
 super + shift + p
 	bspc node -g sticky
 
+alt + space
+	theme
+
 super + q
 	bspc node -c	
 

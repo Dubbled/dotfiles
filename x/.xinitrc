@@ -12,7 +12,8 @@ env() {
 }
 run() {
 	runbar &
-	exec bspwm
+	#exec bspwm
+	exec openbox-session
 }
 graphics
 env
