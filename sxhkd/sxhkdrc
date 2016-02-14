@@ -14,6 +14,9 @@ super + shift + p
 alt + space
 	theme
 
+super + {_,shift} + r
+	bspc node @/ -R {90,270}
+
 super + q
 	bspc node -c	
 
@@ -76,3 +79,17 @@ super + shift + {1-5}
 
 super + Escape
 	pkill -USR1 -x sxhkd && xrdb -load ~/.Xresources
+
+XF86Audio{Prev,Next}
+     mpc -q {prev,next}
+
+
+XF86AudioPlay
+     mpc -q toggle
+
+XF86Audio{LowerVolume,RaiseVolume}
+    amixer -q sset Master 3%{-,+}
+
+XF86AudioMute
+    amixer -q set Master toggle
+
