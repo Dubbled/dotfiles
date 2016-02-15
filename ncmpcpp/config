@@ -1,13 +1,13 @@
 # Playlist
 song_columns_list_format = "$L(9)[white]{l} (20)[magenta]{a} (30)[green]{b}$R(20)[cyan]{t}"
-now_playing_prefix = ">>"
+now_playing_prefix = "|"
 #now_playing_subfix = "/$b"
 playlist_display_mode = "columns" (classic/columns)
 autocenter_mode = "yes"
 centered_cursor = "yes"
 cyclic_scrolling = "no"
 mouse_list_scroll_whole_page = "no"
-song_list_format = "{$8$9}{[%l] >> }{%t }$R{%a - %b}"
+song_list_format = "{$8$9}{[%l]}{%t }$R{%a - %b}"
 #song_list_format = " $0$8$8%l$0$8 $1│$7 $4%a$7 $1│$7 $2%t$1 $R $8%b$1"
 
 
