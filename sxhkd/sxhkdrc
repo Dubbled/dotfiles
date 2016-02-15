@@ -20,9 +20,6 @@ super + {_,shift} + r
 super + q
 	bspc node -c	
 
-super + b
-	bspc node -R
-
 super + m
 	bspc node -s biggest
 
@@ -46,6 +43,9 @@ super + @button{1-3}
 
 super + space
 	menu
+
+super + {b,e}
+	bspc node @/ -{B,E}
 
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
