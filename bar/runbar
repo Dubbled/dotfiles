@@ -4,4 +4,4 @@
 
 while :; do
 	bar
-done | lemonbar -F"#$fg" -B"#$bg" -n bar -f FontAwesome:size=6 -f lemon:size=8 -g 1920x25+0+0 -u 3 | sh
+done | lemonbar -F"#$fg" -B"#$bg" -n bar -f '-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1' -f lemon:size=8 -g 1920x25+0+0 | sh
