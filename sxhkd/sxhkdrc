@@ -28,6 +28,8 @@ super + {_,shift} + Tab
 
 super + Return
 	urxvt
+super + {h, j, k, l}
+	bspc node -f {west, south, north, east}
 
 ~button1
 	bspc pointer -g focus && pkill dmenu
