@@ -11,6 +11,11 @@ URxvt.letterSpace: 0
 URxvt.internalBorder: 15
 URxvt.scrollBar: none
 
+URxvt.perl-ext-common: default,clipboard
+URxvt.iso14755: False
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
 ! Colors
 *background:   bg
 *foreground:   fg
