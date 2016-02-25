@@ -23,5 +23,5 @@ bspc config normal_private_border_color '#cc99cc'
 bspc config urgent_border_color '#f2777a'
 bspc config focus_by_distance false
 
-bspc monitor -d I II III IV V
+bspc monitor -d I II III IV V VI VII
 bspc rule -a bar state=locked follow=on
