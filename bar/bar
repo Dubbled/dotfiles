@@ -22,7 +22,7 @@ WS() {
 }
 
 Todo() {
-	echo "%{A:todo:}%{F#$fg}  %{F-}$(cat .todo | wc -l)%{A}"
+	echo "%{A:todo:}%{F#$fg} %{F-}$(cat .todo | wc -l)%{A}"
 }
 
 Track() {
@@ -34,11 +34,15 @@ Track() {
 }
 
 Weather() {
-	echo " $(weather-report 47906 | grep Temp | tail -c 15 | head -c 5)"
+	echo "$(weather-report 47906 | grep Temp | tail -c 15 | head -c 5)"
 }
 
 Name() {
 	echo "$SEP$(whoami)@$(hostname)$SEP"
 }
 
-echo "$(Track)%{c}$(WS)%{r}$SEP$(Weather)$(Todo)$SEP2$(Clock)"
+Music() {
+	echo "$(mpc | grep volume | head -c 12 | tail -c 5)"
+}
+
+echo "$(Track)%{c}$(WS)%{r}$SEP$(Music)$(Weather)$(Todo)$SEP2$(Clock)"
