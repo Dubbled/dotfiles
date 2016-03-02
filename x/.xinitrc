@@ -7,7 +7,7 @@ graphics() {
 }
 
 env() {
-	compton -b --vsync opengl --config ~/.config/compton/config
+	compton -b --config ~/.config/compton/config
 	sxhkd -c ~/.config/sxhkd/sxhkdrc &
 }
 run() {
