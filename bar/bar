@@ -4,7 +4,7 @@
 SEP="    "
 SEP2="  "
 Clock() {
-	echo "%{A:pkill xinit:}%{+u}%{U#$fg}$SEP$(date +%c)$SEP%{U-}%{-u}%{A}"
+	echo "%{A:lock:}%{A3:bspc quit:}%{+u}%{U#$fg}$SEP$(date +%c)$SEP%{U-}%{-u}%{A}%{A}"
 }
 
 WS() {
@@ -25,16 +25,20 @@ Todo() {
 	echo "%{A:todo:}%{F#$fg} %{F-}$(cat .todo | wc -l)%{A}"
 }
 
+Disks() {
+	echo $(df | grep /dev/sdb2 | tail -c 4)
+}
+
 Track() {
 	prefix=""
 	if [[ $(mpc | grep playing) != "" ]]; then
 		prefix="%{+u}%{U#$fg}"
 	fi
-		echo "%{A:mpc toggle:}$prefix$SEP2 $(mpc | grep -)$SEP2%{U-}%{-u}%{A}"
+	echo "%{A3:mpc next:}%{A:mpc toggle:}$prefix$SEP2 $(mpc | grep -)$SEP2%{U-}%{-u}%{A}%{A}"
 }
 
 Weather() {
-	echo "$(weather-report 47906 | grep Temp | tail -c 15 | head -c 5)"
+	echo "$(weather-report 47906 | grep Temp | tail -c 16 | head -c 7)"
 }
 
 Name() {
@@ -42,7 +46,7 @@ Name() {
 }
 
 Music() {
-	echo "$(mpc | grep volume | head -c 12 | tail -c 5)"
+	echo "$(mpc | grep volume | head -c 12 | tail -c 4)" 
 }
 
-echo "$(Track)%{c}$(WS)%{r}$SEP$(Music)$(Weather)$(Todo)$SEP2$(Clock)"
+echo "%{c}$(WS)%{r}$SEP$(Music)$(Todo)$SEP2$(Clock)"
