@@ -1,7 +1,7 @@
 #!/bin/sh
 
 . $HOME/.bin/colr
-song=$(mpc playlist | dmenu -nb "#$bg" -nf "#$fg" -sb "#$cyn" -sf "#$blk" -l 30 -w 320 -fn "lemon-8" -p "Search >" -x 800 -y 25)
+song=$(mpc playlist | dmenu -nb "#$bg" -nf "#$fg" -sb "#$cyn" -sf "#$blk" -l 30 -w 320 -fn "lemon-8" -p "Search >" -x 0 -y 25)
 
 IFS='
 '

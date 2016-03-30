@@ -4,7 +4,7 @@
 SEP="    "
 SEP2="  "
 Clock() {
-	echo "%{A:lock:}%{A3:bspc quit:}%{+u}%{U#$fg}$SEP$(date +%c)$SEP%{U-}%{-u}%{A}%{A}"
+	echo "%{A:oblogout:}%{A3:bspc quit:}%{+u}%{U#$fg}$SEP$(date +%c)$SEP%{U-}%{-u}%{A}%{A}"
 }
 
 WS() {
@@ -38,7 +38,7 @@ Track() {
 }
 
 Weather() {
-	echo "$(weather-report 47906 | grep Temp | tail -c 16 | head -c 7)"
+	echo "$(weather-report 47906 | grep Temp | tail -c 16 | head -c 8)"
 }
 
 Name() {
@@ -46,7 +46,7 @@ Name() {
 }
 
 Music() {
-	echo "$(mpc | grep volume | head -c 12 | tail -c 4)" 
+	echo " $(mpc | grep volume | head -c 12 | tail -c 5)" 
 }
 
 echo "%{c}$(WS)%{r}$SEP$(Music)$(Todo)$SEP2$(Clock)"

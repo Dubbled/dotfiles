@@ -5,10 +5,10 @@ super + alt + Escape
 super + {_,shift} + c
 	bspc desktop -C {backward, forward}
 
-super + {t, s, f, p}
-	bspc node -t {tiled, floating, fullscreen, pseudo_tiled}
+super + {t, s, f}
+	bspc node -t {tiled, floating, fullscreen}
 
-super + shift + p
+super + p
 	bspc node -g sticky
 
 alt + space
@@ -19,9 +19,6 @@ super + {_,shift} + r
 
 super + q
 	bspc node -c	
-
-super + k
-	bspc node -k
 
 super + m
 	bspc node -s biggest

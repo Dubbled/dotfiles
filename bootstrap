@@ -27,12 +27,10 @@ mkdir ~/.config/ranger
 mkdir ~/.config/sublime-text-3
 mkdir ~/.config/sxhkd
 
-stow bar -t ~/.bin
 stow bspwm -t ~/.config/bspwm
 stow cava -t ~/.config/cava
 stow colors -t ~/.colors
 stow compton -t ~/.config/compton
-stow menu -t ~/.bin
 stow ncmpcpp -t ~/.config/ncmpcpp
 stow nvim -t ~/.config/nvim
 stow openbox -t ~/.config/openbox
