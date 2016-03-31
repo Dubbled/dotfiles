@@ -1,0 +1,3 @@
+. $HOME/.bin/colr
+
+rofi -show ssh -padding 10 -bg "#$bg" -fg "#$fg" -hlbg "#$cyn" -hlfg "#$bg" -font "Lemon 12" -bc "#$cyn" -bw 2

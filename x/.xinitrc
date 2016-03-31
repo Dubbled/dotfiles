@@ -2,7 +2,7 @@
 
 graphics() {
 	xrdb -load ~/.Xresources
-	xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
+	#xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
 	hsetroot -fill .chicago.jpg # -blur 9
 }
 

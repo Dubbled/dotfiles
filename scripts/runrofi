@@ -1,0 +1,6 @@
+#!/bin/sh
+
+. $HOME/.bin/colr
+
+rofi -show run -padding 10 -bg "#$bg" -fg "#$fg" -hlbg "#$cyn" -hlfg "#$bg" -font "Roboto Mono 10" -bc "#$cyn" -bw 2
+
