@@ -13,7 +13,7 @@ rm -rf ~/.config/sublime-text-3
 rm -rf ~/.config/sxhkd
 rm ~/.xinitrc
 rm ~/.Xresources
-
+mkdir ~/.config
 mkdir ~/.bin
 mkdir ~/.config/bspwm
 mkdir ~/.config/cava
