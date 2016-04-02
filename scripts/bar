@@ -4,49 +4,24 @@
 SEP="    "
 SEP2="  "
 Clock() {
-	echo "%{A:oblogout:}%{A3:bspc quit:}%{+u}%{U#$fg}$SEP$(date +%c)$SEP%{U-}%{-u}%{A}%{A}"
+	echo "%{A3:bspc quit:}$SEP$(date +%c)$SEP%{A}"
 }
 
 WS() {
 	switcher=""
 	for desktop in $(bspc query -D); do
 		if [[ $desktop = $(bspc query -D -d) ]]; then
-			switcher="$switcher%{F#$cyn}%{+u}%{U#$cyn}$SEP2  $SEP2%{U-}%{-u}%{F-}"
+			switcher="$switcher%{F#$cyn}%{+u}%{U#$cyn}$SEP2  $SEP2%{U-}%{-u}%{F-}"
 		elif [[ $(bspc query -N -d $desktop | wc -l) -gt 0 ]]; then
-			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
+			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
 		else
-			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
+			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
 		fi
 	done
 	echo "$switcher"
 }
-
-Todo() {
-	echo "%{A:todo:}%{F#$fg} %{F-}$(cat .todo | wc -l)%{A}"
-}
-
-Disks() {
-	echo $(df | grep /dev/sdb2 | tail -c 4)
-}
-
-Track() {
-	prefix=""
-	if [[ $(mpc | grep playing) != "" ]]; then
-		prefix="%{+u}%{U#$fg}"
-	fi
-	echo "%{A3:mpc next:}%{A:mpc toggle:}$prefix$SEP2 $(mpc | grep -)$SEP2%{U-}%{-u}%{A}%{A}"
-}
-
 Weather() {
 	echo "$(weather-report 47906 | grep Temp | tail -c 16 | head -c 8)"
-}
-
-Name() {
-	echo "$SEP$(whoami)@$(hostname)$SEP"
-}
-
-Music() {
-	echo " $(mpc | grep volume | head -c 12 | tail -c 5)" 
 }
 
 echo "%{c}$(WS)%{r}$SEP$(Music)$(Todo)$SEP2$(Clock)"
