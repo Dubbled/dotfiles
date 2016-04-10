@@ -3,11 +3,12 @@
 graphics() {
 	xrdb -load ~/.Xresources
 	xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
-	hsetroot -fill .wallpaper.jpg
+	hsetroot -solid '#333333'
+	xsetroot -cursor_name left_ptr
 }
 
 env() {
-	compton --config ~/.config/compton/config -b --vsync opengl-swc
+	cm start
 	sxhkd -c ~/.config/sxhkd/sxhkdrc &
 }
 run() {
