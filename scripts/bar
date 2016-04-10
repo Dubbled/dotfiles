@@ -4,14 +4,14 @@
 SEP="    "
 SEP2="  "
 Clock() {
-	echo "%{A:sxhkd:}$SEP2$(date +%c)$SEP2%{A}"
+	echo "%{A:sxhkd:}$SEP2$(date +"%a, %d %b %Y %H:%M")$SEP2%{A}"
 }
 
 WS() {
 	switcher=""
 	for desktop in $(bspc query -D); do
 		if [[ $desktop = $(bspc query -D -d) ]]; then
-			switcher="$switcher%{F#$cyn}$SEP2  $SEP2%{F-}"
+			switcher="$switcher%{F#$red}$SEP2  $SEP2%{F-}"
 		elif [[ $(bspc query -N -d $desktop | wc -l) -gt 0 ]]; then
 			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
 		else
@@ -19,9 +19,6 @@ WS() {
 		fi
 	done
 	echo "$switcher"
-}
-Weather() {
-	echo "$(weather-report 47906 | grep Temp | tail -c 16 | head -c 8)"
 }
 
 echo "%{c}$(WS)%{r}$SEP$SEP2$(Clock)"
