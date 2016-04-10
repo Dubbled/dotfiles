@@ -4,7 +4,7 @@
 SEP="    "
 SEP2="  "
 Clock() {
-	echo "%{A:sxhkd:}$SEP2$(date +"%a, %d %b %Y %H:%M")$SEP2%{A}"
+	echo "$(date +"%a, %d %b %Y %H:%M")"
 }
 
 WS() {
@@ -21,4 +21,13 @@ WS() {
 	echo "$switcher"
 }
 
-echo "%{c}$(WS)%{r}$SEP$SEP2$(Clock)"
+VPN() { 
+	if [[ $(systemctl status openvpn@US_Midwest | grep " active") == "" ]]; then
+		echo "%{F#$red}vpn off%{F-}"
+	else
+		echo "%{F#$grn}vpn on%{F-}"
+	fi
+}
+
+
+echo "%{l}$(status)%{r}$(mu)$SEP2|$SEP2$(VPN)$SEP2|$SEP2$(Clock)$SEP2"

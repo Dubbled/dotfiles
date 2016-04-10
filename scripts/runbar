@@ -4,4 +4,5 @@
 
 while :; do
 	bar
+	sleep .5
 done | lemonbar -u 3 -F"#$fg" -B"#$bg" -n bar -f 'FontAwesome:size=12' -o -2 -f lemon:size=10 -g 1920x25+0+0 | sh
