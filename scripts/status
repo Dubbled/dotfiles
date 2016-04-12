@@ -6,9 +6,8 @@ current = subprocess.getoutput('bspc query -D -d')
 line = ""
 for workspace in workspaces:
 	if workspace == current:
-		line += '%{B#1b1b1a}%{F#996140}  ' + workspace + '  %{F-}%{B-}'
+		line += '%{F#1b1b1a}%{B#966140} ' + workspace + ' %{B-}%{F-}'
 	else:
-		line += '  ' + workspace + '  '
-	if workspace != workspaces[-1]:
-		line += '|'
+		line += '%{A:bspc desktop -f ' + workspace + ':} '+ workspace + ' %{A}'
+	line += ' | '
 print(line)

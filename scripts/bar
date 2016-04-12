@@ -4,7 +4,7 @@
 SEP="    "
 SEP2="  "
 Clock() {
-	echo "$(date +"%a, %d %b %Y %H:%M")"
+	echo "$(date +"%a, %d %b %Y %I:%M %p")"
 }
 
 WS() {
@@ -28,6 +28,5 @@ VPN() {
 		echo "%{F#$grn}vpn on%{F-}"
 	fi
 }
-
 
 echo "%{l}$(status)%{r}$(mu)$SEP2|$SEP2$(VPN)$SEP2|$SEP2$(Clock)$SEP2"

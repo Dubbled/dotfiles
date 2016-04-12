@@ -2,4 +2,4 @@
 
 . $HOME/.bin/colr
 
-rofi -show run -padding 5 -bg "#$bg" -fg "#$fg" -hlbg "#$red" -hlfg "#$bg" -font "Lemon 8" -bc "#$red" -bw 1
+rofi -show run -padding 5 -bg "#$bg" -fg "#$fg" -hlbg "#$red" -hlfg "#$bg" -location 0 -font "Lemon 8" -bc "#$red" -bw 1
