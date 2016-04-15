@@ -11,5 +11,5 @@ if status == 'playing':
 else:
 	color = '%{F#996140}'
 
-print(color + '%{A:mpc toggle:}' + status + '%{A}%{F-}')
+print(color + '%{A:mpc toggle:}mpd > %{F-}' + volume + '%{A}')
 

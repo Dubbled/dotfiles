@@ -29,4 +29,4 @@ VPN() {
 	fi
 }
 
-echo "%{l}$(status)%{r}$(mu)$SEP2|$SEP2$(VPN)$SEP2|$SEP2$(Clock)$SEP2"
+echo "%{l}$(status)%{c}$(sng)%{r}$(mu)$SEP2|$SEP2$(VPN)$SEP2|$SEP2$(Clock)$SEP2"

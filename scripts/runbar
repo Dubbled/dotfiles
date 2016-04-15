@@ -3,4 +3,4 @@
 . $HOME/.bin/colr
 while :; do
 	bar
-done | lemonbar -u 0 -F"#$fg" -B"#00$bg" -n bar -f 'FontAwesome:size=12' -o -2 -f lemon:size=8 -g 1910x15+5+5 | sh
+done | lemonbar -u 0 -F"#80$fg" -B"#00$bg" -n bar -o -2 -f FontAwesome:size=12 -f lemon:size=8 -g 1910x15+5+5 | sh
