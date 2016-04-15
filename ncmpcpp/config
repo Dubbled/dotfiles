@@ -1,6 +1,6 @@
 # Playlist
-song_columns_list_format = "$L(8)[magenta]{l} (30)[green]{t} (20)[blue]{a}$R(20)[red]{b}"
-now_playing_prefix = "|"
+song_columns_list_format = "$L(8)[magenta]{l} (40)[green]{t} (35)[blue]{a}$R(20)[red]{b}"
+#now_playing_prefix = "|"
 #now_playing_subfix = "/$b"
 playlist_display_mode = "columns" (classic/columns)
 autocenter_mode = "yes"
