@@ -1,4 +1,4 @@
-#include ".colors/currentscheme"
+#include ".colors/fury"
 
 st.geometry: 80x14
 st.font: lemon:size=8
