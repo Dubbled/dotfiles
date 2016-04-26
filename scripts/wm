@@ -12,10 +12,10 @@ for line in sys.stdin:
 			workspace = line[i][1:]
 			out += '%{A:bspc desktop -f ' + workspace + ':}'
 			if line[i].startswith('O') or line[i].startswith('F'): #Focused
-				out += '%{F#996140}'
+				out += '%{F#98442f}'
 			elif line[i].startswith('o') or line[i].startswith('f'):
 				out += '%{F#b0b0a2}'	
 			else:
 				out += '%{F#7b6064}'
-			out += workspace + '%{A}%{F-}  '
+			out += workspace + '%{A}%{F-}    '
 	print('%W' + out)

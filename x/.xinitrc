@@ -1,7 +1,11 @@
 #!/bin/sh
 
 graphics() {
-	xrdb -load ~/.Xresources
+	if [[ $(hostname) = "globtop"]]; then
+		xrdb -load ~/.Xresources.laptop
+	else	
+		xrdb -load ~/.Xresources
+	fi
 	xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
 	hsetroot -solid '#111111'
 	xsetroot -cursor_name left_ptr

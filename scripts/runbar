@@ -6,4 +6,11 @@
 mkfifo "/tmp/barfifo"
 #echo "%C$(date +"%a, %d %b %Y %I:%M:%S %p")" > "/tmp/barfifo" &
 clock &
-bar < /tmp/barfifo | lemonbar -f lemon:size=8 -F"#$fg" -B"#$bg" -g 1520x25+200+10 -p | sh
+
+if [[ $(hostname) = "globbox" ]]; then
+	settings="-f lemon:size=8 -g 1520x25+200+10 "
+else
+	settings="-f RobotoMono:siz12 -g 2880x50+0+0 "
+fi
+
+bar < /tmp/barfifo | lemonbar ${settings} -F"#$fg" -B"#$bg" -p | sh
