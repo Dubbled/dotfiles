@@ -1,32 +1,21 @@
-#!/bin/bash
+#!/bin/sh
 
 . $HOME/.bin/colr
-SEP="    "
-SEP2="  "
-Clock() {
-	echo "$(date +"%a, %d %b %Y %I:%M %p")"
-}
-
-WS() {
-	switcher=""
-	for desktop in $(bspc query -D); do
-		if [[ $desktop = $(bspc query -D -d) ]]; then
-			switcher="$switcher%{F#$red}$SEP2  $SEP2%{F-}"
-		elif [[ $(bspc query -N -d $desktop | wc -l) -gt 0 ]]; then
-			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
-		else
-			switcher="$switcher%{A:bspc desktop -f $desktop:}$SEP2  $SEP2%{A}"
-		fi
+line=""
+SEP="   "
+while :; do
+	while read -r line ; do
+		case $line in
+			%C*)
+			clock="$(echo $line | cut -c 3-)"
+			;;
+			%W*)
+			wm="$(echo $line | cut -c 3-)"
+		esac
 	done
-	echo "$switcher"
-}
-
-VPN() { 
-	if [[ $(systemctl status openvpn@US_Midwest | grep " active") == "" ]]; then
-		echo "%{F#$red}vpn off%{F-}"
-	else
-		echo "%{F#$grn}vpn on%{F-}"
+	line="%{l}$SEP${wm}%{r}${clock}$SEP"
+	if [[ "$line" != "$last" ]]; then
+		last="$line"
+		echo "$line"
 	fi
-}
-
-echo "%{l}$(status)%{c}$(sng)%{r}$(mu)$SEP2|$SEP2$(VPN)$SEP2|$SEP2$(Clock)$SEP2"
+done

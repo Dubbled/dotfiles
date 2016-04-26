@@ -1,6 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
 . $HOME/.bin/colr
-while :; do
-	bar
-done | lemonbar -u 0 -F"#80$fg" -B"#00$bg" -n bar -o -2 -f FontAwesome:size=12 -f lemon:size=8 -g 1910x15+5+5 | sh
+
+[ -e "/tmp/barfifo" ] && rm "/tmp/barfifo"
+mkfifo "/tmp/barfifo"
+#echo "%C$(date +"%a, %d %b %Y %I:%M:%S %p")" > "/tmp/barfifo" &
+clock &
+bar < /tmp/barfifo | lemonbar -f lemon:size=8 -F"#$fg" -B"#$bg" -g 1520x25+200+10 -p | sh
