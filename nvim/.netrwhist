@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/ace/.colors'
 let g:netrw_dirhist_2='/home/ace'
 let g:netrw_dirhist_3='/home'
 let g:netrw_dirhist_4='/'
+let g:netrw_dirhist_5='/home/ace/.vim'

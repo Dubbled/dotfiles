@@ -1,5 +1,10 @@
 #!/bin/sh
 
 . $HOME/.bin/colr
+if [[ $(hostname) = "globtop" ]]; then
+	font="RobotoMono 12"
+else
+	font="Lemon 8"
+fi
 
-rofi -show run -padding 5 -bg "#$bg" -fg "#$fg" -hlbg "#$red" -hlfg "#$bg" -location 0 -font "Lemon 8" -bc "#$red" -bw 1
+rofi -show run -padding 5 -bg "#$bg" -fg "#$fg" -hlbg "#$red" -hlfg "#$bg" -location 0 -font "$font" -bc "#$red" -bw 2
