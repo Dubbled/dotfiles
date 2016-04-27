@@ -1,7 +1,7 @@
 #!/bin/sh
 
 graphics() {
-	if [[ $(hostname) = "globtop"]]; then
+	if [[ $(hostname) = "globtop" ]]; then
 		xrdb -load ~/.Xresources.laptop
 	else	
 		xrdb -load ~/.Xresources
