@@ -5,10 +5,11 @@
 [ -e "/tmp/barfifo" ] && rm "/tmp/barfifo"
 mkfifo "/tmp/barfifo"
 #echo "%C$(date +"%a, %d %b %Y %I:%M:%S %p")" > "/tmp/barfifo" &
+pkill loop
 clock &
-
+loop &
 if [[ $(hostname) = "globbox" ]]; then
-	settings="-f lemon:size=8 -g 1520x25+200+10 "
+	settings="-f lemon:size=8 -g 1920x20+0+0 "
 else
 	settings="-f RobotoMono:size=9 -g 2880x40+0+0 "
 fi
