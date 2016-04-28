@@ -6,10 +6,10 @@ super + alt + {_,shift + }Escape
 super + {_,shift} + c
 	bspc desktop -C {backward, forward}
 
-super + {t, s, f}
-	bspc node -t {tiled, floating, fullscreen}
+super + {t, s, f, p}
+	bspc node -t {tiled, floating, fullscreen, pseudo_tiled}
 
-super + p
+super + shift + p
 	bspc node -g sticky
 
 alt + space
