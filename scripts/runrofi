@@ -7,4 +7,4 @@ else
 	font="Lemon 8"
 fi
 
-rofi -show run -padding 10 -bg "#$bg" -fg "#$fg" -hlbg "#$red" -hlfg "#$bg" -location 0 -font "$font" -bc "#$red" -bw 2
+rofi -show run -padding 10 -color-window "#$bg, #$red, #$red" -color-normal "#$bg, #$fg, #$bg, #$red, #$bg" -color-active "#$bg, #$red, #$red, #$bg" -location 0 -font "$font" -bc "#$red" -bw 2

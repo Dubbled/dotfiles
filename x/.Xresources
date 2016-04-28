@@ -5,17 +5,10 @@ st.font: lemon:size=8
 st.letterSpace: -2
 st.shell: /usr/bin/zsh
 st.bellvolume: 0
-if [[ $(hostname) = "globtop" ]]; then
-	URxvt.geometry: 130x22
-	URxvt.font: xft:RobotoMono:size=12
-	URxvt.boldFont: xft:RobotoMono:size=12
-	URxvt.internalBorder: 15
-else
-	URxvt.geometry: 80x14
-	URxvt.font: xft:lemon:size=8
-	URxvt.boldFont: xft:lemon:size=8
-	URxvt.internalBorder: 5
-fi
+URxvt.geometry: 80x14
+URxvt.font: xft:lemon:size=8
+URxvt.boldFont: xft:lemon:size=8
+URxvt.internalBorder: 5
 URxvt.scrollBar: none
 URxvt.letterSpace: 0
 URxvt.perl-ext-common: default,clipboard
