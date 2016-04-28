@@ -29,7 +29,7 @@ bspc config normal_private_border_color '#cc99cc'
 bspc config urgent_border_color '#f2777a'
 bspc config focus_by_distance false
 bspc config focus_follows_mouse true
-bspc monitor -d one two three four five six seven
+bspc monitor -d I II III IV V VI VII
 bspc rule -a bar state=locked follow=on
 
 if [ -e "$BSPWM_STATE" ] ; then

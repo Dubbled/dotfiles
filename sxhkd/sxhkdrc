@@ -76,10 +76,10 @@ alt + {minus, equal}
 	padding {+, -}
 
 super + {1-7}
-	bspc desktop -f {one, two, three, four, five, six, seven}
+	bspc desktop -f {I, II, III, IV, V, VI, VII}
 
 super + shift + {1-7}
-	bspc node -d {one, two, three, four, five, six, seven}
+	bspc node -d {I, II, III, IV, V, VI, VII}
 
 super + Escape
 	pkill -USR1 -x sxhkd && xrdb -load ~/.Xresources
