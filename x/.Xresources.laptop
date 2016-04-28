@@ -6,8 +6,8 @@ st.letterSpace: -2
 st.shell: /usr/bin/zsh
 st.bellvolume: 0
 URxvt.geometry: 70x12
-URxvt.font: xft:RobotoMono:size=12
-URxvt.boldFont: xft:RobotoMono:size=12
+URxvt.font: xft:RobotoMono:size=10
+URxvt.boldFont: xft:RobotoMono:size=10
 URxvt.internalBorder: 15
 URxvt.scrollBar: none
 URxvt.letterSpace: 0

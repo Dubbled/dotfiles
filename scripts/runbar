@@ -10,7 +10,7 @@ clock &
 if [[ $(hostname) = "globbox" ]]; then
 	settings="-f lemon:size=8 -g 1520x25+200+10 "
 else
-	settings="-f RobotoMono:siz12 -g 2880x50+0+0 "
+	settings="-f RobotoMono:size=9 -g 2880x40+0+0 "
 fi
 
 bar < /tmp/barfifo | lemonbar ${settings} -F"#$fg" -B"#$bg" -p | sh
