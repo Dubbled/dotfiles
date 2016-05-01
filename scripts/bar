@@ -13,7 +13,7 @@ while :; do
 			wm="$(echo $line | cut -c 3-)"
 		esac
 	done
-	line="%{l}$SEP${wm}%{r}${clock}$SEP"
+	line="%{l}$SEP${wm}%{r}%{F#$bg}%{B#$red}$SEP${clock}$SEP%{B-}%{F-}"
 	if [[ "$line" != "$last" ]]; then
 		last="$line"
 		echo "$line"

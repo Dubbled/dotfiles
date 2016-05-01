@@ -9,7 +9,7 @@ pkill loop
 clock &
 loop &
 if [[ $(hostname) = "globbox" ]]; then
-	settings="-f lemon:size=8 -g 1920x20+0+0 "
+	settings="-f lemon:size=8 -g 1920x25+0+0 "
 else
 	settings="-f RobotoMono:size=11 -g 2880x50+0+0 "
 fi

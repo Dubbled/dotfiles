@@ -3,9 +3,9 @@
 . $HOME/.bin/colr
 
 if [[ $(hostname) = "globbox" ]]; then
-	bspc config border_width       2
+	bspc config border_width       1
 	bspc config window_gap         10
-	bspc config top_padding	20
+	bspc config top_padding	25
 else
 	bspc config border_width	2
 	bspc config window_gap 20
