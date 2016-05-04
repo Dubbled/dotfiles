@@ -1,6 +1,6 @@
 #!/usr/bin/dash
 
 while :; do
-	echo "%C$(date +"%a, %d %b %Y %I:%M %p")" > "/tmp/barfifo"
+	echo "%C$(date +"%I:%M %p")" > "/tmp/barfifo"
 	sleep 60
 done

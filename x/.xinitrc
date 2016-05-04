@@ -6,9 +6,9 @@ graphics() {
 		xrandr --output eDPI --mode 2880x1800 --rate 60
 	else	
 		xrdb -load ~/.Xresources
-		xrandr --output DVI-I-1 --mode 1920x1080 --rate 120
+		xrandr --output DVI-I-1 --mode 1920x1080 --rate 60
 	fi
-	hsetroot -solid '#111111'
+	hsetroot -tile 'Pictures/Wallpapers/binding_dark.png'
 	xsetroot -cursor_name left_ptr
 }
 
