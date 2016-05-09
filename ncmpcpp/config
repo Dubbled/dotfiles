@@ -1,7 +1,7 @@
 # Playlist
-song_columns_list_format = "$L(8)[magenta]{l} (40)[green]{t} (25)[blue]{a}$R(20)[red]{b}"
-#now_playing_prefix = "|"
-#now_playing_subfix = "/$b"
+song_columns_list_format = "$L(10)[magenta]{l} (40)[green]{t} (25)[blue]{a}$R(20)[red]{b}"
+now_playing_prefix = "> "
+#now_playing_subfix = " <"
 playlist_display_mode = "columns" (classic/columns)
 autocenter_mode = "yes"
 centered_cursor = "yes"
@@ -11,7 +11,6 @@ song_list_format = "{$8$9}{[%l]}{%t }$R{%a - %b}"
 #song_list_format = " $0$8$8%l$0$8 $1│$7 $4%a$7 $1│$7 $2%t$1 $R $8%b$1"
 mpd_music_dir = "/mnt/Z/Music"
 song_library_format = "{%n > }{%t}|{%f}"
-mpd_host = "128.211.203.184"
 # Bars
 song_status_format = "{%a - }{%t - }{%b}"
 progressbar_look = "─  "
