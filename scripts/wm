@@ -13,7 +13,9 @@ for line in sys.stdin:
 			out += '%{A:bspc desktop -f ' + workspace + ':} '
 			if line[i].startswith('O') or line[i].startswith('F'): #Focused
 				out += '\uf111'
-			elif line[i].startswith('o') or line[i].startswith('f'):
-				out += '\uf1db'	
+			elif line[i].startswith('o'):
+				out += '\uf192'
+			elif line[i].startswith('f'):
+				out += '\uf1db'
 			out += ' %{A}'
 	print('%W' + out)
