@@ -7,7 +7,7 @@ st.shell: /usr/bin/zsh
 st.bellvolume: 0
 URxvt.geometry: 80x14
 URxvt.font: xft:lemon:size=8
-URxvt.boldFont: xft:lemon:size=8
+URxvt.boldFont: xft:lemon-bold:size=8
 URxvt.internalBorder: 5
 URxvt.scrollBar: none
 URxvt.letterSpace: 0

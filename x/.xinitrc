@@ -6,7 +6,7 @@ graphics() {
 		xrandr --output eDPI --mode 2880x1800 --rate 60
 	else	
 		xrdb -load ~/.Xresources
-		xrandr --output DVI-I-1 --mode 1920x1080 --rate 60
+		xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
 	fi
 	hsetroot -tile 'Pictures/Wallpapers/binding_dark.png'
 	xsetroot -cursor_name left_ptr
@@ -15,12 +15,14 @@ graphics() {
 env() {
 	cm start
 	sxhkd -c ~/.config/sxhkd/sxhkdrc &
+	start-pulseaudio-x11
 }
 run() {
 	runbar &
 	clock &
 	loop &
-	exec bsp
+	bsp &
+	exec xfce4-session
 }
 graphics
 env
