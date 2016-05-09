@@ -11,9 +11,12 @@ while :; do
 			;;
 			%W*)
 			wm="$(echo $line | cut -c 3-)"
+			;;
+			%N*)
+			inet="$(echo $line | cut -c 3-)"
 		esac
 	done
-	line="%{l}%{B#$red}%{F#$bg}$SEP${wm}$SEP%{F-}%{B-}%{r}%{F#$bg}%{B#$red}$SEP${clock}$SEP%{B-}%{F-}"
+	line="%{l}$SEP${wm}$SEP  %{r}   ${clock}   "
 	if [[ "$line" != "$last" ]]; then
 		last="$line"
 		echo "$line"
