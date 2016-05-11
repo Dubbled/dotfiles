@@ -1,12 +1,12 @@
 #!/bin/sh
 if [[ "$1" = "+" ]]; then
-	bspc config -d focused left_padding $((`bspc config -d focused left_padding ` + 50 ))
-	bspc config -d focused right_padding $((`bspc config -d focused right_padding ` + 50 ))
-	bspc config -d focused top_padding $((`bspc config -d focused top_padding ` + 30 ))
-	bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding ` + 30 ))
+	bspc config -d focused left_padding $((`bspc config -d focused left_padding ` + 32 ))
+	bspc config -d focused right_padding $((`bspc config -d focused right_padding ` + 32 ))
+	bspc config -d focused top_padding $((`bspc config -d focused top_padding ` + 18 ))
+	bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding ` + 18 ))
 else
-	bspc config -d focused left_padding $((`bspc config -d focused left_padding ` - 50 ))
-	bspc config -d focused right_padding $((`bspc config -d focused right_padding ` - 50 ))
-	bspc config -d focused top_padding $((`bspc config -d focused top_padding ` - 30 ))
-	bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding ` - 30 ))
+	bspc config -d focused left_padding $((`bspc config -d focused left_padding ` - 32 ))
+	bspc config -d focused right_padding $((`bspc config -d focused right_padding ` - 32 ))
+	bspc config -d focused top_padding $((`bspc config -d focused top_padding ` - 18 ))
+	bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding ` - 18 ))
 fi

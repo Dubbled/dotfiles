@@ -1,15 +1,14 @@
-#!/usr/bin/python
+#!/usr/bin/sh
 
-import subprocess
+last=""
 
-output = subprocess.getoutput('mpc').split('\n')
-status = output[1].split(' ')[0][:-1][1:]
-volume = output[2].split(':')[1][:-9]
-
-if status == 'playing':
-	color = '%{F#799c6a}'
-else:
-	color = '%{F#996140}'
-
-print(color + '%{A:mpc toggle:}mpd > %{F-}' + volume + '%{A}')
-
+while :; do
+    song=$(mpc current)
+    if [[ "$song" = "$last" ]]; then
+        continue
+    fi
+    pkill pop
+    pop "$song" &
+    last="$song"
+    sleep .1
+done

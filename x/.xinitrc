@@ -8,7 +8,7 @@ graphics() {
 		xrdb -load ~/.Xresources
 		xrandr --output DVI-I-1 --mode 1920x1080 --rate 144
 	fi
-	hsetroot -tile 'Pictures/Wallpapers/binding_dark.png'
+	hsetroot -tile 'Pictures/Wallpapers/footer_lodyas.png'
 	xsetroot -cursor_name left_ptr
 }
 
@@ -21,8 +21,7 @@ run() {
 	runbar &
 	clock &
 	loop &
-	bsp &
-	exec xfce4-session
+	exec bsp
 }
 graphics
 env

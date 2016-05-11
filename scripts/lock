@@ -3,7 +3,7 @@ sleep 1
 ss=/tmp/ss.png
 scrot "$ss"
 i3lock -u -i $ss
-convert -scale 10% -scale 1000% "$ss" "$ss"
+#convert -scale 10% -scale 1000% "$ss" "$ss"
 convert $ss ~/Pictures/lock.png -gravity center -composite -matte "$ss"
 pkill i3lock
 i3lock -u -i "$ss"

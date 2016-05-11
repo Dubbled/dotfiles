@@ -4,9 +4,8 @@
 
 [ -e "/tmp/barfifo" ] && rm "/tmp/barfifo"
 mkfifo "/tmp/barfifo"
-pkill loop
-pkill np
 clock &
+mu &
 loop &
 np &
 if [[ $(hostname) = "globbox" ]]; then
