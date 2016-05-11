@@ -13,7 +13,7 @@ super + shift + p
 	bspc node -g sticky
 
 alt + space
-	theme
+	spawn
 
 super + {_,shift} + r
 	bspc node @/ -R {90,270}
@@ -46,7 +46,7 @@ super + @button{1-3}
 	bspc pointer -u
 
 super + space
-	menu
+	run
 
 super + {b,e}
 	bspc node @/ -{B,E}
