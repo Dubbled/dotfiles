@@ -16,7 +16,7 @@ while :; do
 			inet="$(echo $line | cut -c 3-)"
 		esac
 	done
-	line="%{l}$SEP${wm}$SEP  %{r}   ${clock}   "
+	line="%{l}$SEP${wm}$SEP  %{r}${vpn}   ${clock}   "
 	if [[ "$line" != "$last" ]]; then
 		last="$line"
 		echo "$line"
