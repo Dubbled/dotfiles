@@ -28,7 +28,7 @@ super + {_,shift} + Tab
 	bspc node -f {prev, next}
 
 super + Return
-	urxvt
+	urxvtc
 
 super + {h, j, k, l}
 	bspc node -f {west, south, north, east}
@@ -46,7 +46,7 @@ super + @button{1-3}
 	bspc pointer -u
 
 super + space
-	run
+	runrofi
 
 super + {b,e}
 	bspc node @/ -{B,E}
@@ -59,6 +59,9 @@ super + ctrl + {1-9}
 
 ctrl + super + space
 	bspc node -p cancel
+
+super + shift + {h, l}
+	bspc node -m {prev, next}
 
 super + alt + {h, j, k, l}
 	bspc node {@west -r -25,@south -r +25,@north -r -25,@east -r +25}

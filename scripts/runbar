@@ -5,7 +5,6 @@
 [ -e "/tmp/barfifo" ] && rm "/tmp/barfifo"
 mkfifo "/tmp/barfifo"
 clock &
-mu &
 loop &
 np &
 if [[ $(hostname) = "globbox" ]]; then

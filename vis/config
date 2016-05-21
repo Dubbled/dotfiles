@@ -1,5 +1,5 @@
 ##Refresh rate of the visualizers. A really high refresh rate may cause screen tearing. Default is 20.
-visualizer.fps=144
+visualizer.fps=60
 
 ##Sets the audio sources to use. Currently available ones are "mpd" and "alsa"Sets the audio sources to use.
 ##Currently available ones are "mpd" and "alsa". Defaults to "mpd".
@@ -8,7 +8,7 @@ audio.sources=pulse
 ##vis tries to find the correct pulseaudio sink, however this will not work on all systems.
 ##If pulse audio is not working with vis try switching the audio source. A list can be found by running the
 ##command pacmd list-sinks  | grep -e 'name:'  -e 'index'
-#audio.pulse.source=4
+audio.pulse.source=1
 ##Defaults to "/tmp/mpd.fifo"
 #mpd.fifo.path=/tmp/mpd.fifo
 
