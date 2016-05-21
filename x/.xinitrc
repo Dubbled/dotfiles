@@ -7,10 +7,10 @@ graphics() {
 	else	
 		xrdb -load ~/.Xresources
 		xrandr --output DVI-I-1 --mode 1920x1080 --rate 60
-		xrandr --output HDMI-0 --mode 1920x1080 --rate 60 --left-of DVI-I-1
-		xrandr --output DVI-D-0 --mode 1920x1080 --rate 60 --left-of HDMI-0
+		xrandr --output HDMI-1 --mode 1920x1080 --rate 60 --left-of DVI-I-1
+		xrandr --output DVI-D-1 --mode 1920x1080 --rate 60 --left-of HDMI-1
 	fi
-	hsetroot -tile 'Pictures/Wallpapers/binding_dark.png'
+	hsetroot -fill .wall.jpg
 	xsetroot -cursor_name left_ptr
 }
 
@@ -22,7 +22,6 @@ env() {
 	nvid
 }
 run() {
-	runbar &
 	clock &
 	loop &
 	exec bsp
