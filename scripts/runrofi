@@ -9,4 +9,4 @@ else
 	padding="2"
 fi
 
-rofi -show run -m -1 -padding "$padding" -color-window "#$bg, #$red, #$red" -color-normal "#$bg, #$fg, #$bg, #$red, #$bg" -color-active "#$bg, #$red, #$red, #$bg" -location 0 -font "$font" -bc "#$wht" -bw 2
+rofi -show run -m -1 -padding "$padding" -color-window "#$bg, #$fg, #$fg" -color-normal "#$bg, #$fg, #$bg, #$fg, #$bg" -color-active "#$bg, #$red, #$red, #$bg" -location 0 -font "$font" -bc "#$wht" -bw 2 -opacity 90
