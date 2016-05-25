@@ -4,7 +4,6 @@
 
 [ -e "/tmp/barfifo" ] && rm "/tmp/barfifo"
 mkfifo "/tmp/barfifo"
-clock &
 loop &
 np &
 if [[ $(hostname) = "globbox" ]]; then
@@ -13,4 +12,4 @@ else
 	settings="-f RobotoMono:size=11 -g 2880x50+0+0 "
 fi
 
-bar < /tmp/barfifo | lemonbar ${settings} -F"#$fg" -B"#00$bg" -p | sh
+	bar < /tmp/barfifo | lemonbar ${settings} -F"#$fg" -B"#00$bg" -p | sh

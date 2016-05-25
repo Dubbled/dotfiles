@@ -1,6 +1,8 @@
 #!/usr/bin/dash
 
+. $HOME/.bin/colr
+
 while :; do
-	echo "%C$(date +"%I:%M %p")" > "/tmp/barfifo"
-	sleep 60
-done
+	sleep 1
+	echo "%{c}$(date +"%I:%M %p")"
+done | lemonbar -p -g 125x30+3650+1030 -f Roboto:size=10 -B "#$bg" -F "#$fg"

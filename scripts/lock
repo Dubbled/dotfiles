@@ -5,6 +5,6 @@ scrot "$ss"
 i3lock -u -i $ss
 convert -blur 0x8 "$ss" "$ss"
 #convert -scale 10% -scale 1000% "$ss" "$ss"
-convert $ss ~/Pictures/lock.png -gravity center -composite -matte "$ss"
+#convert $ss ~/Pictures/lock.png -gravity center -composite -matte "$ss"
 pkill i3lock
 i3lock -u -i "$ss"
