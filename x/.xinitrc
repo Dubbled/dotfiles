@@ -5,12 +5,11 @@ graphics() {
 		xrdb -load ~/.Xresources.laptop
 		xrandr --output eDPI --mode 2880x1800 --rate 60
 	else	
+		nvid
 		xrdb -load ~/.Xresources
-		xrandr --output DVI-I-1 --mode 1920x1080 --rate 60
-		xrandr --output HDMI-1 --mode 1920x1080 --rate 60 --left-of DVI-I-1
-		xrandr --output DVI-D-1 --mode 1920x1080 --rate 60 --left-of HDMI-1
+		xrandr --auto --output HDMI-0 --left-of DVI-I-1 --rate 60 --rotate left --output DVI-I-1 --rate 144 --mode 1920x1080
 	fi
-	hsetroot -fill .wall.jpg
+	hsetroot -fill .wall.png
 	xsetroot -cursor_name left_ptr
 }
 
@@ -19,14 +18,11 @@ env() {
 	sxhkd -c ~/.config/sxhkd/sxhkdrc &
 	start-pulseaudio-x11
 	urxvtd -q -f -o 
-	nvid
 }
 run() {
 	clock &
-	loop &
 	exec bsp
 }
 graphics
 env
 run
-#exec xfce4-session
