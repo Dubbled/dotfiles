@@ -10,7 +10,7 @@ if [[ $(hostname) = "globbox" ]]; then
 	bspc config right_padding 105
 	bspc config bottom_padding 54
 else
-	bspc config border_width	2
+	bspc config border_width	4
 	bspc config window_gap 20
 	bspc config top_padding 50
 fi
@@ -32,8 +32,7 @@ bspc config normal_private_border_color '#cc99cc'
 bspc config urgent_border_color '#f2777a'
 bspc config focus_by_distance false
 bspc config focus_follows_mouse true
-bspc monitor DVI-I-1 -d I II III IV V
-bspc monitor HDMI-0 -d I II III IV V
+bspc monitor -d I II III IV V
 bspc rule -a bar state=locked follow=on
 
 if [ -e "$BSPWM_STATE" ] ; then

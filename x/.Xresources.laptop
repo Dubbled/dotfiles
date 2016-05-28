@@ -5,7 +5,7 @@ st.font: lemon:size=8
 st.letterSpace: -2
 st.shell: /usr/bin/zsh
 st.bellvolume: 0
-URxvt.geometry: 70x12
+URxvt.geometry: 80x12
 URxvt.font: xft:RobotoMono:size=11
 URxvt.boldFont: xft:RobotoMono:size=11
 URxvt.internalBorder: 15
