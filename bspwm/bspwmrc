@@ -10,16 +10,19 @@ if [[ $(hostname) = "globbox" ]]; then
 	bspc config right_padding 105
 	bspc config bottom_padding 54
 else
-	bspc config border_width	4
+	bspc config border_width 4
 	bspc config window_gap 20
-	bspc config top_padding 50
+	bspc config top_padding 20
+	bspc config bottom_padding 50
+	bspc config left_padding 75
+	bspc config right_padding 75
 fi
 
 bspc config split_ratio         0.5
 bspc config borderless_monocle  true
 bspc config gapless_monocle     true
 bspc config focus_by_distance   true
-bspc config focused_border_color "#$fg"
+bspc config focused_border_color "#$cyn"
 bspc config active_border_color "#$bblk"
 bspc config normal_border_color "#$bblk"
 bspc config normal_locked_border_color "#$fg"

@@ -9,7 +9,7 @@ graphics() {
 		xrdb -load ~/.Xresources
 		xrandr --auto --output HDMI-0 --left-of DVI-I-1 --rate 60 --rotate left --output DVI-I-1 --rate 144 --mode 1920x1080
 	fi
-	hsetroot -fill .wall.png
+	hsetroot -solid "#133133"
 	xsetroot -cursor_name left_ptr
 }
 
