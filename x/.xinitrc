@@ -7,7 +7,7 @@ graphics() {
 	else	
 		nvid
 		xrdb -load ~/.Xresources
-		xrandr --auto --output HDMI-0 --left-of DVI-I-1 --rate 60 --rotate left --output DVI-I-1 --rate 144 --mode 1920x1080
+		xrandr --auto --output HDMI-0 --left-of DVI-I-1 --rate 60 --output DVI-I-1 --rate 144 --mode 1920x1080
 	fi
 	hsetroot -solid "#133133"
 	xsetroot -cursor_name left_ptr
