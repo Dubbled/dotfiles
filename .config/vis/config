@@ -8,7 +8,7 @@ audio.sources=pulse
 ##vis tries to find the correct pulseaudio sink, however this will not work on all systems.
 ##If pulse audio is not working with vis try switching the audio source. A list can be found by running the
 ##command pacmd list-sinks  | grep -e 'name:'  -e 'index'
-audio.pulse.source=1
+#audio.pulse.source=1
 
 ##Defaults to "/tmp/mpd.fifo"
 #mpd.fifo.path=/tmp/mpd.fifo
@@ -70,7 +70,7 @@ visualizer.spectrum.bar.width=1
 
 ##Configures what character the ellipse visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to "█".
-#visualizer.ellipse.character=#
+visualizer.ellipse.character=-
 
 ##The radius of each color ring in the ellipse visualizer. Defaults to 2.
 #visualizer.ellipse.radius=2
@@ -81,4 +81,4 @@ visualizer.spectrum.bar.width=1
 #visualizer.lorenz.character=#
 
 ##Specifies the color scheme. The color scheme must be in ~/.config/vis/colors/ directory. The default scheme is "colors".
-colors.scheme=green
+colors.scheme=red

@@ -15,6 +15,15 @@ super + shift + p
 alt + space
 	spawn
 
+XF86AudioPlay
+	mpc -q toggle
+
+	XF86AudioStop
+	mpc stop
+
+XF86Audio{Prev,Next}
+	mpc -q {prev,next}
+
 super + {_,shift} + r
 	bspc node @/ -R {90,270}
 
@@ -26,6 +35,9 @@ super + m
 
 super + {_,shift} + Tab
 	bspc node -f {prev, next}
+
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 super + Return
 	urxvtc
@@ -93,4 +105,3 @@ XF86Audio{LowerVolume,RaiseVolume}
 
 XF86AudioMute
     amixer -q set Master toggle
-

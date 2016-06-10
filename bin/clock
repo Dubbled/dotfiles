@@ -5,4 +5,4 @@
 while :; do
 	sleep 1
 	echo "%{c}$(date +"%I:%M %p")"
-done | lemonbar -p -g 125x30+3650+1030 -f Roboto:size=10 -B "#$bg" -F "#$fg"
+done | lemonbar -p -g 125x30+50+1030 -f Roboto:size=10 -B "#$bg" -F "#$fg"

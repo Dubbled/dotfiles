@@ -1,0 +1,84 @@
+#!/bin/sh
+. $HOME/.bin/colr
+num_mon=$(bspc query -M | wc -l)
+while read -r line ; do
+	case $line in
+#		S*)
+#			# clock output
+#			sys="%{F#$fg}%{B#$bg} ${line#?} %{B-}%{F-}"
+#			;;
+		T*)
+			# xtitle output
+			title="%{F$fg}%{B$bg} ${line#?} %{B-}%{F-}"
+			;;
+		W*)
+			# bspwm's state
+			wm=""
+			IFS=':'
+			set -- ${line#?}
+			while [ $# -gt 0 ] ; do
+				item=$1
+				name=${item#?}
+				case $item in
+					[mM]*)
+						[ $num_mon -lt 2 ] && shift && continue
+						case $item in
+							m*)
+								# monitor
+								FG=$COLOR_MONITOR_FG
+								BG=$COLOR_MONITOR_BG
+								;;
+							M*)
+								# focused monitor
+								FG=$COLOR_FOCUSED_MONITOR_FG
+								BG=$COLOR_FOCUSED_MONITOR_BG
+								;;
+						esac
+						wm="${wm}%{F${FG}}%{B${BG}}%{A:bspc monitor -f ${name}:} ${name} %{A}%{B-}%{F-}"
+						;;
+					[fFoOuU]*)
+						case $item in
+							f*)
+								# free desktop
+								FG="#$bblk"
+								BG="#$bg"
+								;;
+							F*)
+								# focused free desktop
+								FG="#$red"
+								BG="#$bg"
+								;;
+							o*)
+								# occupied desktop
+								FG="#$fg"
+								BG="#$bg"
+								;;
+							O*)
+								# focused occupied desktop
+								FG="#$red"
+								BG="#$bg"
+								;;
+							u*)
+								# urgent desktop
+								FG=$COLOR_URGENT_FG
+								BG=$COLOR_URGENT_BG
+								;;
+							U*)
+								# focused urgent desktop
+								FG=$COLOR_FOCUSED_URGENT_FG
+								BG=$COLOR_FOCUSED_URGENT_BG
+								;;
+						esac
+						wm="${wm}%{F${FG}}%{B${BG}}%{A:bspc desktop -f ${name}:} ${name} %{A}%{B-}%{F-}"
+						;;
+#					[LTG]*)
+#						# layout, state and flags
+#						wm="${wm}%{F$FG}%{B$BG} ${name} %{B-}%{F-}"
+#						;;
+				esac
+				shift
+			done
+			;;
+	esac
+	printf "%s\n" "%{l}    ${wm}    %{c}%{r}     $(date '+%a %H:%M')     "
+done
