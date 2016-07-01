@@ -40,7 +40,7 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 super + Return
-	urxvtc
+	urxvtc -e bash
 
 super + {h, j, k, l}
 	bspc node -f {west, south, north, east}
