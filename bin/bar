@@ -1,12 +1,13 @@
 #!/bin/sh
 . $HOME/.bin/colr
+mu="%{A:mpc prev:}$(echo "")%{A}%{A:mpc toggle:}%{A}%{A:mpc next:}%{A}"
 num_mon=$(bspc query -M | wc -l)
 while read -r line ; do
 	case $line in
-#		S*)
-#			# clock output
-#			sys="%{F#$fg}%{B#$bg} ${line#?} %{B-}%{F-}"
-#			;;
+		C*)
+			# clock output
+			clock="%{A:dzen_cal:}${line#?}%{A}"
+			;;
 		T*)
 			# xtitle output
 			title="%{F$fg}%{B$bg} ${line#?} %{B-}%{F-}"
@@ -80,5 +81,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}    ${wm}    %{c}%{r}     $(date '+%a %H:%M')     "
+	printf "%s\n" "%{l}    ${wm}    ${title}%{c}%{r}     ${clock}     "
 done

@@ -18,7 +18,7 @@ shadow-ignore-shaped = false;
 
 # Opacity
 menu-opacity = 1;
-inactive-opacity = 1;
+inactive-opacity = .7;
 active-opacity = 1;
 frame-opacity = .7;
 inactive-opacity-override = false;

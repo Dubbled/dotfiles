@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. $HOME/.bin/colr
+
 graphics() {
 	if [[ $(hostname) = "globtop" ]]; then
 		xrdb -load ~/.Xresources.laptop
