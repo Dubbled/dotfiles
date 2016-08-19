@@ -1,4 +1,4 @@
 #/bin/sh
 
-source $HOME/.bin/colr
-dmenu -fn 'lemon-10' -sf "#$bg" -sb "#$fg" -w 1920 -x 0 -y 0 -h 22 -l 0 -p "Run >"
+. $HOME/.bin/colr
+dmenu_run -fn 'terminus-10' -sf "#$bg" -sb "#$red" -w 1920 -x 0 -y 0 -h 25 -l 0 -p "Run >"

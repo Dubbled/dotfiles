@@ -4,16 +4,13 @@
 mkfifo "/tmp/barfifo"
 bspc subscribe > /tmp/barfifo &
 xtitle -sf 'T%s' > /tmp/barfifo &
-if [[ $(hostname) = "globbox" ]]; then
-	settings="-o -1 -f uushi:size=8 -g 1920x25+0+0 -o 1 -f FontAwesome:size=10"
-else
-	settings="-f RobotoMono:size=11 -f FontAwesome:size=12 -b -g 2880x50+0+0 "
-fi
+settings="-o -1 -f terminus:size=8 -g 1920x25+0+0 -o 1 -f FontAwesome:size=10"
 
 while true;
 	do
-		echo 'C' $(date +"%b/%d  %H:%M") ;
-	sleep 5;
+		echo 'C' $(date +"%D   %I:%M %p")
+		echo 'V' $(amixer get Master | sed -n 's/^.*\[\([0-9]\+%\).*$/\1/p' | uniq)
+	sleep .5
 done > "/tmp/barfifo" &
 
 cat /tmp/barfifo | bar | lemonbar ${settings} -F"#$fg" -B"#$bg" -p -u 3 | sh

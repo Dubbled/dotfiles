@@ -1,16 +1,19 @@
 #!/bin/sh
 . $HOME/.bin/colr
-mu="%{A:mpc prev:}$(echo "")%{A}%{A:mpc toggle:}%{A}%{A:mpc next:}%{A}"
 num_mon=$(bspc query -M | wc -l)
 while read -r line ; do
 	case $line in
+		V*)
+			# volume
+			vol="${line#?}"
+			;;
 		C*)
 			# clock output
 			clock="%{A:dzen_cal:}${line#?}%{A}"
 			;;
 		T*)
 			# xtitle output
-			title="%{F$fg}%{B$bg} ${line#?} %{B-}%{F-}"
+			title="${line#?}"
 			;;
 		W*)
 			# bspwm's state
@@ -81,5 +84,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}    ${wm}    ${title}%{c}%{r}     ${clock}     "
+	printf "%s\n" "%{l}    ${wm}    ${title}%{c}%{r} vol:${vol}  ${clock}     "
 done

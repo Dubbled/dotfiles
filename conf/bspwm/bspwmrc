@@ -25,7 +25,7 @@ bspc config normal_private_border_color '#cc99cc'
 bspc config urgent_border_color '#f2777a'
 bspc config focus_by_distance false
 bspc config focus_follows_mouse true
-bspc monitor DVI-I-1 -d I II III IV V
+bspc monitor DVI-I-1 -d I II III IV V VI VII IX
 bspc rule -a bar state=locked follow=on
 bspc rule -a mpv state=floating
 if [ -e "$BSPWM_STATE" ] ; then

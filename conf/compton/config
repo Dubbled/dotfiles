@@ -10,17 +10,16 @@ shadow-opacity = .7;
 shadow-red = 0.0;
 shadow-green = 0.0;
 shadow-blue = 0.0;
-#shadow-exclude = [ "name = 'Notification'", "class_g = 'Conky'", "class_g ?= 'Notify-osd'", "class_g = 'Cairo-clock'" ];
-# shadow-exclude = "n:e:Notification";
 shadow-ignore-shaped = false;
-# shadow-exclude-reg = "x10+0+0";
-# xinerama-shadow-crop = true;
-
+shadow-exclude = [
+	"class_g = 'Dmenu'",
+	"class_g = 'stalonetray'"
+];
 # Opacity
 menu-opacity = 1;
-inactive-opacity = .7;
+inactive-opacity = 1;
 active-opacity = 1;
-frame-opacity = .7;
+frame-opacity = .8;
 inactive-opacity-override = false;
 alpha-step = 0.02;
 inactive-dim = 0.0;
@@ -32,12 +31,12 @@ blur-kern = "3x3box"
 # blur-background-fixed = true;
 blur-background-exclude = [ "window_type = 'dock'", "window_type = 'desktop'" ];
 # opacity-rule = [ "80:class_g = 'URxvt'" ];
-
+opacity-rule = [ "63:class_g = 'Bspwm' && class_i = 'presel_feedback'" ];
 # Fading
 fading = true;
 # fade-delta = 30;
 fade-in-step = 0.1;
-fade-out-step = 0.05;
+fade-out-step = 0.1;
 # no-fading-openclose = true;
 fade-exclude = [ ];
 
