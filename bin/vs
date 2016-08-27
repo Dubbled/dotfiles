@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case $1 in
+	m*)
+		cryptsetup open --type luks $(findfs UUID=90d53636-9c46-4918-b846-7933b5fdd609) vs
+		mount /dev/mapper/vs /mnt/vs
+		;;
+	u*)
+		umount /mnt/vs
+		cryptsetup close vs
+		;;
+	cd*)
+		cd /mnt/vs
+esac
+		

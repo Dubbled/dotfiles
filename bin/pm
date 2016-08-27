@@ -24,7 +24,7 @@ while [ "$DONE" -eq 0 ] ; do
   if [ "$LEVEL" -ne 0 ] ; then
     password_files=(".." "${password_files[@]}") 
   fi
-  entry=$(printf '%s\n' "${password_files[@]}" | menu2 "$@" -l 15 -p "")
+  entry=$(printf '%s\n' "${password_files[@]}" | dmenu_wrapper "$@" -l 15 -p "")
   
   echo "entry: $entry"
   if [ -z $entry ] ; then

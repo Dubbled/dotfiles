@@ -1,4 +1,4 @@
 #/bin/sh
 
 source $HOME/.bin/colr
-dmenu -fn 'terminus-12' -sf "#$bg" -sb "#$red" -w 1080 -x 900 -y 0 -h 30 -l 15
+dmenu -fn 'terminus-8' -sf "#$bg" -sb "#$red" -x 0 -y 0 -h 25 -l 5 
