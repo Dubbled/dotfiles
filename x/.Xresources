@@ -1,7 +1,7 @@
-URxvt.geometry: 95x14
-URxvt.font: xft:lemon:size=8
-URxvt.boldFont: xft:lemon-bold:size=8
-URxvt.internalBorder: 2
+URxvt.geometry: 80x14
+URxvt.font: xft:terminus:size=8
+URxvt.boldFont: xft:terminus-bold:size=8
+URxvt.internalBorder: 7 
 URxvt.scrollBar: none
 URxvt.letterSpace: 0
 URxvt.iso14755: False
@@ -12,38 +12,38 @@ URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
 ! special
-*.foreground:   #a7a7a7
-*.background:   #1e1e1e
-*.cursorColor:  #a7a7a7
+*.foreground:   #c0c5ce
+*.background:   #2b303b
+*.cursorColor:  #c0c5ce
 
 ! black
-*.color0:       #1e1e1e
-*.color8:       #5f5a60
+*.color0:       #2b303b
+*.color8:       #65737e
 
 ! red
-*.color1:       #cf6a4c
-*.color9:       #cf6a4c
+*.color1:       #bf616a
+*.color9:       #bf616a
 
 ! green
-*.color2:       #8f9d6a
-*.color10:      #8f9d6a
+*.color2:       #a3be8c
+*.color10:      #a3be8c
 
 ! yellow
-*.color3:       #f9ee98
-*.color11:      #f9ee98
+*.color3:       #ebcb8b
+*.color11:      #ebcb8b
 
 ! blue
-*.color4:       #7587a6
-*.color12:      #7587a6
+*.color4:       #8fa1b3
+*.color12:      #8fa1b3
 
 ! magenta
-*.color5:       #9b859d
-*.color13:      #9b859d
+*.color5:       #b48ead
+*.color13:      #b48ead
 
 ! cyan
-*.color6:       #afc4db
-*.color14:      #afc4db
+*.color6:       #96b5b4
+*.color14:      #96b5b4
 
 ! white
-*.color7:       #a7a7a7
-*.color15:      #ffffff
+*.color7:       #c0c5ce
+*.color15:      #eff1f5

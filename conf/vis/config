@@ -1,5 +1,5 @@
 ##Refresh rate of the visualizers. A really high refresh rate may cause screen tearing. Default is 20.
-visualizer.fps=144
+visualizer.fps=60
 
 ##Sets the audio sources to use. Currently available ones are "mpd" and "alsa"Sets the audio sources to use.
 ##Currently available ones are "mpd", "pulse" and "alsa". Defaults to "mpd".
@@ -8,7 +8,7 @@ audio.sources=pulse
 ##vis tries to find the correct pulseaudio sink, however this will not work on all systems.
 ##If pulse audio is not working with vis try switching the audio source. A list can be found by running the
 ##command pacmd list-sinks  | grep -e 'name:'  -e 'index'
-#audio.pulse.source=1
+#audio.pulse.source=0
 
 ##Defaults to "/tmp/mpd.fifo"
 #mpd.fifo.path=/tmp/mpd.fifo
@@ -31,7 +31,7 @@ audio.sources=pulse
 #visualizers=spectrum,ellipse,lorenz
 
 
-##Configures what charactej the spectrum visualizer will use. Specifying a space (e.g " ") means the
+##Configures what character the spectrum visualizer will use. Specifying a space (e.g " ") means the
 ##background will be colored instead of the character. Defaults to " ".
 visualizer.spectrum.character=|
 
@@ -40,7 +40,7 @@ visualizer.spectrum.bar.width=1
 
 ##The amount of space between each bar in the spectrum visualizer. Defaults to 1. It's possible to set this to
 ##zero to have no space between bars
-visualizer.spectrum.bar.spacing=0
+visualizer.spectrum.bar.spacing=-
 
 ##Available smoothing options are monstercat, sgs, none.
 #visualizer.spectrum.smoothing.mode=monstercat
@@ -81,4 +81,4 @@ visualizer.ellipse.character=-
 #visualizer.lorenz.character=#
 
 ##Specifies the color scheme. The color scheme must be in ~/.config/vis/colors/ directory. The default scheme is "colors".
-colors.scheme=red
+colors.scheme=white

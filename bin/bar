@@ -3,9 +3,6 @@
 num_mon=$(bspc query -M | wc -l)
 while read -r line ; do
 	case $line in
-		M*)
-			mpd="${line#?}"
-			;;
 		V*)
 			# volume
 			vol="${line#?}"
@@ -87,5 +84,5 @@ while read -r line ; do
 			done
 			;;
 	esac
-	printf "%s\n" "%{l}    ${wm}    ${title}%{c}${mpd}%{r} vol:${vol}  ${clock}     "
+	printf "%s\n" "%{l}    ${wm}    ${title}%{c}%{r} vol:${vol}  ${clock}     "
 done

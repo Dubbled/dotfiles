@@ -2,6 +2,3 @@ open_with
 open_with subl
 open_with atom
 delete
-shell 
-cd
-

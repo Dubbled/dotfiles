@@ -21,4 +21,4 @@ while True:
 	o.flush()
 	o.write(l)
 	o.write(endcol)
-	sleep(0.0005)
+	sleep(0.005)

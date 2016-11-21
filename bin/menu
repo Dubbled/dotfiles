@@ -1,4 +1,4 @@
 #/bin/sh
 
 . $HOME/.bin/colr
-dmenu_run -fn 'lemon-8' -sf "#$bg" -sb "#$red" -w 1120 -x 400 -y 400 -h 20 -l 10 -p "Run >"
+dmenu_run -fn 'terminus-8' -sf "#$bg" -sb "#$fg" -w 1920 -x 0 -y 0 -h 25 -l 0 -p "Run >"
