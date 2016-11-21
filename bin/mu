@@ -1,14 +1,5 @@
 #!/usr/bin/sh
 
-last=""
-
 while :; do
-    song=$(mpc current)
-    if [[ "$song" = "$last" ]]; then
-        continue
-    fi
-    pkill pop
-    pop "$song" &
-    last="$song"
-    sleep .1
+	echo 'M' $(mpc current --wait -f "%title% - %artist%") > /tmp/barfifo &
 done

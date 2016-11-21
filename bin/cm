@@ -1,6 +1,6 @@
 #!/bin/sh
 pkill compton
 if [[ "$1" = "start" ]]; then
-	compton --config ~/.config/compton/config -b
+	compton -i .7 --active-opacity .7 -o .7 -r 15 -D 7 -C -cf -I .1 -O .1 --config .config/compton/config -b --refresh-rate 144
 fi
 
