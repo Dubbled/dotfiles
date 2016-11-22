@@ -31,10 +31,10 @@ super + {_,shift} + q
 	bspc node -c
 
 super + m
-	bspc node -s biggest
+	bspc node -s biggest.local
 
 super + {_,shift} + Tab
-	bspc node -f {prev, next}
+	bspc node -f {prev, next}.local
 
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
@@ -44,12 +44,6 @@ super + Return
 
 super + {h, j, k, l}
 	bspc node -f {west, south, north, east}
-
-~button1
-	bspc pointer -g focus && pkill dmenu
-
-super + button{1-3}
-	bspc pointer -g {move,resize_side,resize_corner}
 
 super + space
 	menu

@@ -4,7 +4,7 @@
 mkfifo "/tmp/barfifo"
 bspc subscribe > /tmp/barfifo &
 xtitle -sf 'T%s' > /tmp/barfifo &
-settings="-o -1 -f terminus:size=8 -g 1920x25+0+0 -o 1 -f FontAwesome:size=10"
+settings="-o -1 -f lemon:size=8 -g 1920x20+0+0 -o 1"
 
 while true;
 	do
