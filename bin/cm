@@ -1,6 +1,6 @@
 #!/bin/sh
 pkill compton
 if [[ "$1" = "start" ]]; then
-	compton --config ~/.config/compton/config -f -b
+	compton -o .4 -cf -O .3 -I .1 -i .7 --active-opacity .7 -e .4 --config ~/.config/compton/config -f -b
 fi
 

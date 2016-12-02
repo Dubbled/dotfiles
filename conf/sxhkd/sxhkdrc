@@ -46,7 +46,12 @@ super + {h, j, k, l}
 	bspc node -f {west, south, north, east}
 
 super + space
-	menu
+    rofi -show run -font "Lemon 8"
+
+super + {_,shift} + i
+    insert={true,false}; \
+    $insert && bspc node -i || \
+    for win in `bspc query -N -n .leaf.!window.local`; do bspc node $win -k ; done;
 
 super + {b,e}
 	bspc node @/ -{B,E}
@@ -64,10 +69,10 @@ super + shift + {h, l}
 	bspc node -m {prev, next}; bspc monitor -f {prev, next}
 
 super + alt + {h, j, k, l}
-	bspc node {@west -r -25,@south -r +25,@north -r -25,@east -r +25}
+	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
 super + shift + alt + {h, j, k, l}
-	bspc node {@east -r -25,@north -r +25,@south -r -25,@west -r +25}
+	bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
 
 super + r
 	bspc node -R 90
@@ -78,11 +83,11 @@ super + {w, e}
 alt + {minus, equal}
 	padding {+, -}
 
-super + {1-9}
-	bspc desktop -f {I, II, III, IV, V, VI, VII, VIII, IX}
+super + {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+	bspc desktop -f {I, II, III, IV, V, VI, VII, VIII, IX, X}
 
-super + shift + {1-9}
-	bspc node -d {I, II, III, IV, V, VI, VII, VIII, IX}
+super + shift + {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+	bspc node -d {I, II, III, IV, V, VI, VII, VIII, IX, X}
 
 super + Escape
 	pkill -USR1 -x sxhkd && xrdb -load ~/.Xresources

@@ -1,4 +1,4 @@
 #/bin/sh
 
 source $HOME/.bin/colr
-dmenu -fn 'terminus-8' -sf "#$bg" -sb "#$red" -x 0 -y 0 -h 25 -l 5 
+rofi -dmenu -font "Lemon 8" -l 5 

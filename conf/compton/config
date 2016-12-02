@@ -1,16 +1,9 @@
 shadow-exclude = [
 	"class_g = 'Dmenu'",
-	"name = 'bar'"
-];
-menu-opacity = 1;
-inactive-opacity = .7;
-active-opacity = .7;
-frame-opacity = .9;
+	"name = 'bar'" ];
 inactive-opacity-override = false;
-alpha-step = 0.01;
-fade-in-step = 0.03;
-fade-out-step = 0.03;
-fade-delta = 4;
-opacity-rule = [ "63:class_g = 'Bspwm' && class_i = 'presel_feedback'",
-                    "93:class_g= 'mpv'"];
+fade-delta = 20;
+opacity-rule = [ "30:class_g = 'Bspwm' && class_i = 'presel_feedback'",
+                    "99:class_g = 'mpv'",
+                    "99:name = 'rofi'"];
 refresh-rate = 144;

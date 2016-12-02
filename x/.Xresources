@@ -1,4 +1,4 @@
-URxvt.geometry: 85x14
+URxvt.geometry: 92x10
 URxvt.font: xft:lemon:size=8
 URxvt.boldFont: xft:lemon-bold:size=8
 URxvt.internalBorder: 7 
@@ -10,6 +10,11 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
+
+rofi.clor-enable:	true
+rofi.color-normal:	#1e1e1e, #c3c3c3, #1e1e1e, #cf6a4c, #1e1e1e
+rofi.color-window:	#1e1e1e, #cf6a4c, #cf6a4c
+rofi.separator-styled:	solid
 
 ! special
 *.foreground:   #a7a7a7
