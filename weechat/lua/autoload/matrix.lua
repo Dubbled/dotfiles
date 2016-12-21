@@ -1,0 +1,1 @@
+/home/errl/.weechat/lua/matrix.lua
