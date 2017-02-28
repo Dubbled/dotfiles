@@ -4,7 +4,7 @@
 mkfifo "/tmp/barfifo"
 bspc subscribe > /tmp/barfifo &
 xtitle -sf 'T%s' > /tmp/barfifo &
-settings="-o -1 -f lemon:size=8 -g 1920x20+0+0 -o 1"
+settings="-o -1 -f -benis-lemon-medium-*-normal-*-*-*-75-75-m-*-iso8859-* -g 1920x20+0+0 -o 1"
 
 while true;
 	do

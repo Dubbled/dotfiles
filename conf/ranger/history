@@ -1,4 +1,20 @@
-open_with 
 open_with subl
 open_with atom
+rename Downloads
+search jennifer
+search 
+search vega
+search lana
+search mandy
 delete
+open_with 
+open_with vim
+shell mpv Breaking\ Bad\ S05E06\ 720p\ BluRay\ x264\ AAC-SS\ -={SPARROW}=-.mp4 
+shell mpv mpv --vo=opengl --hwdec=vaapi:
+shell mpv --vo=opengl Breaking\ Bad\ S05E06\ 720p\ BluRay\ x264\ AAC-SS\ -={SPARROW}=-.mp4 
+shell vlc Breaking\ Bad\ S05E06\ 720p\ BluRay\ x264\ AAC-SS\ -={SPARROW}=-.mp4 
+shell vlc Breaking\ Bad\ S05E07\ 720p\ BluRay\ x264\ AAC-SS\ -={SPARROW}=-.mp4 
+shell mpv Breaking\ Bad\ S05E08\ 720p\ BluRay\ x264\ AAC-SS\ -={SPARROW}=-.mp4 
+shell vlc Breaking\ Bad\ S05E11\ 720p\ BluRay\ x264\ AAC-SS\ -={SPARROW}=-.mp4 
+shell vlc Breaking\ Bad\ S05E08\ 720p\ BluRay\ x264\ AAC-SS\ -={SPARROW}=-.mp4 
+shell vlc Breaking\ Bad\ S05E09\ 720p\ BluRay\ x264\ AAC-SS\ -={SPARROW}=-.mp4 

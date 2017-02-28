@@ -11,7 +11,7 @@ from random import choice
 from sys import stdout as o
 from time import sleep
 
-cols = ['\033[30m', '\033[31m', '\033[32m', '\033[33m', '\033[34m', '\033[35m', '\033[36m', '\033[37m']
+cols = ['\033[34m', '\033[35m', '\033[36m', '\033[37m']
 endcol = '\033[0m'
 l = ''
 ch = u"╱╲"

@@ -12,9 +12,6 @@ super + {t, s, f, p}
 super + shift + p
 	bspc node -g sticky
 
-alt + space
-	spawn
-
 XF86AudioPlay
 	mpc -q toggle
 
@@ -28,7 +25,7 @@ super + {_,shift} + r
 	bspc node @/ -R {90,270}
 
 super + {_,shift} + q
-	bspc node -c
+	bspc node -{c,k}
 
 super + m
 	bspc node -s biggest.local
@@ -40,13 +37,13 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 super + Return
-	urxvtc -e bash
+	urxvt
 
 super + {h, j, k, l}
 	bspc node -f {west, south, north, east}
 
 super + space
-    rofi -show run -font "Lemon 8"
+	dmenu_run
 
 super + {_,shift} + i
     insert={true,false}; \
@@ -83,11 +80,12 @@ super + {w, e}
 alt + {minus, equal}
 	padding {+, -}
 
-super + {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
-	bspc desktop -f {I, II, III, IV, V, VI, VII, VIII, IX, X}
+super + {1-9}
+	D={1-9}; \
+	bspc desktop -f "$(bspc query -D -m | sed -n "$D p")"
 
-super + shift + {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
-	bspc node -d {I, II, III, IV, V, VI, VII, VIII, IX, X}
+super + shift + {1-5}
+	bspc node -d {0,1,2,3,4}
 
 super + Escape
 	pkill -USR1 -x sxhkd && xrdb -load ~/.Xresources

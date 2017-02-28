@@ -1,6 +1,6 @@
 #!/bin/sh
 
-choice=$(sessions | dmenu_wrapper)
+choice=$(sessions | menu)
 if [[ choice = "" ]]; then
 	exit
 fi

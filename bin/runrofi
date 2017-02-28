@@ -9,4 +9,5 @@ else
 	padding="2"
 fi
 
+bspc rule -a \* -m $(bspc query -M -m)
 rofi -show run -m -1 -padding "$padding" -color-window "#$bg, #$fg, #$fg" -color-normal "#$bg, #$fg, #$bg, #$fg, #$bg" -color-active "#$bg, #$red, #$red, #$bg" -location 0 -font "$font" -bc "#$wht" -bw 2 -opacity 90
