@@ -37,13 +37,13 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 super + Return
-	urxvt
+	urxvt -e /usr/bin/zsh
 
 super + {h, j, k, l}
 	bspc node -f {west, south, north, east}
 
 super + space
-	dmenu_run
+	dmenu_run -fn "artwiz lemon:size=8"
 
 super + {_,shift} + i
     insert={true,false}; \
@@ -85,7 +85,7 @@ super + {1-9}
 	bspc desktop -f "$(bspc query -D -m | sed -n "$D p")"
 
 super + shift + {1-5}
-	bspc node -d {0,1,2,3,4}
+	bspc node -d {I,II,III,IV,V}
 
 super + Escape
 	pkill -USR1 -x sxhkd && xrdb -load ~/.Xresources

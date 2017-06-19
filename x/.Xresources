@@ -1,7 +1,9 @@
+#include ".colr/fury"
 URxvt.geometry: 92x10
+st.font: -benis-lemon-medium-*-normal-*-*-*-75-75-m-*-iso8859-*
 URxvt.font: -benis-lemon-medium-*-normal-*-*-*-75-75-m-*-iso8859-*
 URxvt.boldFont: -benis-lemon-medium-*-normal-*-*-*-75-75-m-*-iso8859-*
-URxvt.internalBorder: 7 
+URxvt.internalBorder: 0
 URxvt.scrollBar: none
 URxvt.letterSpace: 0
 URxvt.iso14755: False
@@ -11,40 +13,24 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
-! special
-*.foreground:   #c5c8c6
-*.background:   #1d1f21
-*.cursorColor:  #c5c8c6
 
-! black
-*.color0:       #282a2e
-*.color8:       #373b41
+! Colors
+*background:   bg
+*foreground:   fg
 
-! red
-*.color1:       #a54242
-*.color9:       #cc6666
-
-! green
-*.color2:       #8c9440
-*.color10:      #b5bd68
-
-! yellow
-*.color3:       #de935f
-*.color11:      #f0c674
-
-! blue
-*.color4:       #5f819d
-*.color12:      #81a2be
-
-! magenta
-*.color5:       #85678f
-*.color13:      #b294bb
-
-! cyan
-*.color6:       #5e8d87
-*.color14:      #8abeb7
-
-! white
-*.color7:       #707880
-*.color15:      #c5c8c6
-
+*color0:      blk
+*color8:      blk
+*color1:      red
+*color9:      red
+*color2:      grn
+*color10:     grn
+*color3:      ylw
+*color11:     ylw
+*color4:      blu
+*color12:     blu
+*color5:      mag
+*color13:     mag
+*color6:      cyn
+*color14:     cyn
+*color7:      wht
+*color15:     wht

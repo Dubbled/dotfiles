@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go'
 Plug 'nsf/gocode', {'rtp': 'nvim/'}
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
 Plug 'airblade/vim-gitgutter'
 Plug 'rstacruz/vim-xtract'
@@ -17,6 +18,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 hi StatusLineNC cterm=none ctermfg=gray
-hi StatusLine ctermbg=black ctermfg=blue
-hi VertSplit cterm=none ctermfg=blue
+hi StatusLine ctermbg=black ctermfg=red
+hi VertSplit cterm=none ctermfg=red
 

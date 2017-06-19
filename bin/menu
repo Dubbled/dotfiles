@@ -1,4 +1,4 @@
 #/bin/sh
 
 . $HOME/.bin/colr
-dmenu3 -fn "-benis-lemon-medium-*-normal-*-*-*-75-75-m-*-iso8859-*" -sf "#$bg" -sb "#$fg" -w 1920 -x 0 -y 0 -h 15 -l 0 -centerx -s 0 -nb "#$bg" -sb "#$blu" -sf "#$bg"
+dmenu -fn "-benis-lemon-medium-*-normal-*-*-*-75-75-m-*-iso8859-*" -sf "#$bg" -sb "#$fg" -w 1920 -x 0 -y 0 -h 15 -l 0 -s 0 -nb "#$bg" -sb "#$blu" -sf "#$bg"

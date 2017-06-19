@@ -3,7 +3,7 @@
 
 #define bg      #1a1a18
 #define fg      #9e9e91
-#define blk     #1d1d1c
+#define blk     #2d2d2d
 #define bblk    #363636
 #define red     #98442f
 #define ylw     #9d8554

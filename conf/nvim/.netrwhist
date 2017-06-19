@@ -1,8 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/ace/.colors'
-let g:netrw_dirhist_2='/home/ace'
-let g:netrw_dirhist_3='/home'
-let g:netrw_dirhist_4='/'
-let g:netrw_dirhist_5='/home/ace/.vim'
-let g:netrw_dirhist_6='/'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/errl/Go/src/gitlab.com/dubbled'
+let g:netrw_dirhist_2='/home/errl/Go/src/gitlab.com/dubbled/csbet'
+let g:netrw_dirhist_3='/home/errl/Go/src/gitlab.com/dubbled/csbet/db'
