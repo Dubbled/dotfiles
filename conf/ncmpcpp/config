@@ -1,5 +1,5 @@
 # Playlist
-song_columns_list_format = "$L(10)[red]{l} (40)[white]{t} (25)[red]{a}$R(20)[white]{b}"
+song_columns_list_format = "$L(10)[cyan]{l} (40)[white]{t} (25)[cyan]{a}$R(20)[white]{b}"
 now_playing_prefix = "> "
 #now_playing_subfix = " <"
 playlist_display_mode = "columns" (classic/columns)
@@ -28,15 +28,15 @@ header_window_color = "black"
 volume_color = "cyan"
 state_line_color = "black"
 state_flags_color = "magenta"
-main_window_color = "red"
-color1 = "red"
+main_window_color = "cyan"
+color1 = "cyan"
 color2 = "black"
 main_window_highlight_color = "white"
 progressbar_color = "black"
-statusbar_color = "red"
-active_column_color = "red"
-visualizer_color = "red"
-progressbar_elapsed_color = "red"
+statusbar_color = "cyan"
+active_column_color = "cyan"
+visualizer_color = "cyan"
+progressbar_elapsed_color = "cyan"
 
 # Others
 song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"

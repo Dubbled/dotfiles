@@ -3,7 +3,6 @@ open_with atom
 rename Downloads
 search jennifer
 search 
-search vega
 search lana
 search mandy
 open_with vim
@@ -18,4 +17,7 @@ shell vlc Breaking\ Bad\ S05E08\ 720p\ BluRay\ x264\ AAC-SS\ -={SPARROW}=-.mp4
 shell vlc Breaking\ Bad\ S05E09\ 720p\ BluRay\ x264\ AAC-SS\ -={SPARROW}=-.mp4 
 shell mpv btra15601-480p.mp4 
 open_with 
+search vega
 delete
+find 
+search Action

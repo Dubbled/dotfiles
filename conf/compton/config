@@ -4,7 +4,7 @@ inactive-opacity-override = false;
 fade-delta = 20;
 opacity-rule = [ "30:class_g = 'Bspwm' && class_i = 'presel_feedback'",
                     "99:class_g = 'mpv'",
-                    "99:name = 'rofi'",
-		"70:class_g = 'Polybar'",
+                    "99:name = 'dmenu'",
+		    "70:class_g = 'Polybar'",
 		    "99:name = 'i3lock'"];
 refresh-rate = 60;

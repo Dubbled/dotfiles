@@ -1,4 +1,4 @@
-#include ".colr/fury"
+#include ".colr/designr"
 URxvt.geometry: 92x10
 st.font: -benis-lemon-medium-*-normal-*-*-*-75-75-m-*-iso8859-*
 URxvt.font: -benis-lemon-medium-*-normal-*-*-*-75-75-m-*-iso8859-*
@@ -13,6 +13,11 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
+rofi.font: artwiz lemon 8
+rofi.color-enabled: true
+rofi.color-window: bg, cyn, cyn
+rofi.color-normal: bg, fg, bg, cyn, bg
+rofi.color-active: cyn, bg, cyn, cyn, bg
 
 ! Colors
 *background:   bg

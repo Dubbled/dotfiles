@@ -1,4 +1,6 @@
 #!/bin/bash
+
+source $HOME/.bin/colr
 super + alt + {_,shift + }Escape
 	{bspc wm -d > "$BSPWM_STATE" && bspc quit, \
 	 bspc quit 1}
@@ -40,10 +42,10 @@ super + Return
 	urxvt -e /usr/bin/zsh
 
 super + {h, j, k, l}
-	bspc node -f {west, south, north, east}
+	bspc node -f {west, south, north, east
 
 super + space
-	dmenu_run -fn "artwiz lemon:size=8"
+	rofi -show run
 
 super + {_,shift} + i
     insert={true,false}; \
