@@ -5,10 +5,10 @@ pkill bar
 bspc config pointer_motion_interval 1
 bspc config click_to_focus true
 bspc config border_width 2
-bspc config window_gap 25
-bspc config top_padding 45
-bspc config left_padding 0
-bspc config right_padding 0
+bspc config window_gap 10
+bspc config top_padding 20
+bspc config left_padding 27
+bspc config right_padding 27
 bspc config bottom_padding 0
 bspc config split_ratio         0.5
 bspc config focused_border_color "#$cyn"
@@ -24,11 +24,11 @@ bspc rule -a Steam desktop='^4' state=floating follow=false
 bspc rule -a Gimp desktop='^8' state=floating
 bspc rule -a Deluge desktop='^5' follow=false
 xrdb ~/.Xresources
-hsetroot -tile "$HOME/range.jpg"
 sxhkd -c ~/.config/sxhkd/sxhkdrc &
 xrandr --output DVI-I-1 --rate 144
 xrandr --output DP-0 --right-of DVI-I-1 --rotate normal --mode 1920x1080
 xrandr --output DVI-D-0 --left-of DVI-I-1 --rotate normal --mode 1920x1080
+hsetroot -tile "$HOME/.wp/range.jpg"
 
 polybar left &
 polybar middle &

@@ -1,0 +1,87 @@
+[bar/left]
+modules-left = mpd
+modules-center = bspwm
+
+monitor = DVI-D-0
+override-redirect = true
+height = 20
+width = 1920
+offset-x = 0
+offset-y = 0
+
+padding-left = 2
+
+font-0 = artwiz nu:style=Regular
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+
+[bar/middle]
+modules-left = bspwm
+modules-right = filesystem
+
+monitor = DVI-I-1
+override-redirect = true
+height = 20
+width = 1920
+offset-x = 0
+offset-y = 0
+
+padding-right = 2
+
+font-0 = artwiz nu:style=Regular
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+
+[bar/right]
+modules-center = bspwm
+modules-right = date
+
+monitor = DP-0
+override-redirect = true
+height = 20
+width = 1920
+offset-x = 0
+offset-y = 0
+
+padding-right = 2
+font-0 = artwiz nu:style=Regular
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+
+label-focused = "  %name%  "
+label-occupied = "  %name%  "
+label-empty =
+
+label-focused-background = ${xrdb:color6}
+label-focused-foreground = ${xrdb:background}
+label-empty-foreground = ${xrdb:background}
+
+[module/date]
+type = internal/date
+interval = 1.0
+
+date = %m/%d/%Y
+time = %H:%M
+label = %time% %date%
+
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port = 6600
+
+interval = 2
+label-song = %artist% - %title%
+
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+mount-1 = /mnt/Z
+spacing = 3
+
+label-mounted = %mountpoint% - %used%/%total%

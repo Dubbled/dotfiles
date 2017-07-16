@@ -6,5 +6,6 @@ opacity-rule = [ "30:class_g = 'Bspwm' && class_i = 'presel_feedback'",
                     "99:class_g = 'mpv'",
                     "99:name = 'dmenu'",
 		    "70:class_g = 'Polybar'",
-		    "99:name = 'i3lock'"];
+		    "99:name = 'i3lock'",
+		    "90:class_g = 'Chromium'"];
 refresh-rate = 60;
