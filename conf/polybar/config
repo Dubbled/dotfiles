@@ -1,3 +1,23 @@
+[bar/uw]
+modules-center = bspwm
+modules-right = test-vps1 test-rd1 test-streisand test-bertha test-titan test-dock1 test-dock2 test-dev
+
+monitor = HDMI-0
+override-redirect = true
+height = 20
+width = 100%
+offset-x = 0
+offset-y = 0
+
+border-size = 5
+border-color = ${xrdb:background}
+
+padding-left = 2
+
+font-0 = artwiz lemon 
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+
 [bar/left]
 modules-left = mpd
 modules-center = bspwm
@@ -5,13 +25,16 @@ modules-center = bspwm
 monitor = DVI-D-0
 override-redirect = true
 height = 20
-width = 1920
+width = 100%
 offset-x = 0
 offset-y = 0
 
+border-size = 5
+border-color = ${xrdb:background}
+
 padding-left = 2
 
-font-0 = artwiz nu:style=Regular
+font-0 = artwiz lemon 
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
@@ -22,13 +45,15 @@ modules-right = filesystem
 monitor = DVI-I-1
 override-redirect = true
 height = 20
-width = 1920
+width = 100%
 offset-x = 0
 offset-y = 0
 
 padding-right = 2
+border-size = 5
+border-color = ${xrdb:background}
 
-font-0 = artwiz nu:style=Regular
+font-0 = artwiz lemon 
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
@@ -39,12 +64,14 @@ modules-right = date
 monitor = DP-0
 override-redirect = true
 height = 20
-width = 1920
+width = 100%
 offset-x = 0
 offset-y = 0
+border-size = 5
+border-color = ${xrdb:background}
 
 padding-right = 2
-font-0 = artwiz nu:style=Regular
+font-0 = artwiz lemon 
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
@@ -56,9 +83,11 @@ label-focused = "  %name%  "
 label-occupied = "  %name%  "
 label-empty =
 
-label-focused-background = ${xrdb:color6}
+label-focused-background = ${xrdb:color1}
 label-focused-foreground = ${xrdb:background}
 label-empty-foreground = ${xrdb:background}
+label-occupied-foreground = ${xrdb:foreground}
+label-occupied-background = ${xrdb:background}
 
 [module/date]
 type = internal/date
@@ -85,3 +114,35 @@ mount-1 = /mnt/Z
 spacing = 3
 
 label-mounted = %mountpoint% - %used%/%total%
+[module/test-vps1]
+type = custom/script
+exec = "pingtest vps1"
+interval = 30
+[module/test-rd1]
+type = custom/script
+exec = "pingtest rd1"
+interval = 30
+[module/test-dock1]
+type = custom/script
+exec = "pingtest dock1"
+interval = 5
+[module/test-dock2]
+type = custom/script
+exec = "pingtest dock2"
+interval = 5
+[module/test-dev]
+type = custom/script
+exec = "pingtest dev"
+interval = 5
+[module/test-streisand]
+type = custom/script
+exec = "pingtest streisand"
+interval = 30
+[module/test-bertha]
+type = custom/script
+exec = "pingtest bertha"
+interval = 5
+[module/test-titan]
+type = custom/script
+exec = "pingtest titan"
+interval = 5

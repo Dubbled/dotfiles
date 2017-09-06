@@ -87,7 +87,10 @@ super + {1-9}
 	bspc desktop -f "$(bspc query -D -m | sed -n "$D p")"
 
 super + shift + {1-5}
-	bspc node -d {I,II,III,IV,V}
+	bspc node $node -d {0, 1, 2, 3, 4};
+
+alt + space
+	rofi -show window
 
 super + Escape
 	pkill -USR1 -x sxhkd && xrdb -load ~/.Xresources

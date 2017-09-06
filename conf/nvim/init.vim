@@ -10,7 +10,7 @@ Plug 'rstacruz/vim-xtract'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'zchee/deoplete-go', {'do': 'make'}
 call plug#end()
-colorscheme delek
+colorscheme desert
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#go#gocode_binary = '$GOPATH/bin/gocode'
 let g:deoplete#sources#go#use_cache = 1
@@ -19,8 +19,10 @@ set nu
 set tabstop=4
 set shiftwidth=4
 set expandtab
-hi StatusLineNC ctermbg=none ctermfg=white
-hi StatusLine ctermbg=none ctermfg=cyan
-hi VertSplit cterm=none ctermfg=cyan
-hi LineNr ctermbg=none ctermfg=cyan
-hi SpellBad ctermbg=cyan ctermfg=gray
+set nowrap
+set noswapfile
+hi StatusLineNC ctermbg=gray ctermfg=black
+hi StatusLine ctermbg=none ctermfg=red
+hi VertSplit cterm=none ctermfg=red
+hi LineNr ctermbg=none ctermfg=red
+hi SpellBad ctermbg=red ctermfg=gray
