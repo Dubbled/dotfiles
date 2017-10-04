@@ -1,4 +1,4 @@
-#include ".colr/fury"
+#include ".colr/subtle"
 URxvt.geometry: 92x10
 URxvt.font: -benis-lemon-medium-*-normal-*-*-*-75-75-m-*-iso8859-*
 st.font: -benis-lemon-medium-*-normal-*-*-*-75-75-m-*-iso8859-*
@@ -15,9 +15,9 @@ URxvt.matcher.button: 1
 
 rofi.font: artwiz lemon 8
 rofi.color-enabled: true
-rofi.color-window: bg, red, red 
-rofi.color-normal: bg, fg, bg, red, bg
-rofi.color-active: red, bg, red, red, bg
+rofi.color-window: bg, blu, blu
+rofi.color-normal: bg, fg, bg, blu, bg
+rofi.color-active: blu, bg, blu, blu, bg
 
 ! Colors
 *background:   bg

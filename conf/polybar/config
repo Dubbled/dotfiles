@@ -9,12 +9,10 @@ width = 100%
 offset-x = 0
 offset-y = 0
 
-border-size = 5
-border-color = ${xrdb:background}
 
 padding-left = 2
 
-font-0 = artwiz lemon 
+font-0 = artwiz nu
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
@@ -24,17 +22,15 @@ modules-center = bspwm
 
 monitor = DVI-D-0
 override-redirect = true
-height = 20
+height = 20 
 width = 100%
 offset-x = 0
 offset-y = 0
 
-border-size = 5
-border-color = ${xrdb:background}
 
 padding-left = 2
 
-font-0 = artwiz lemon 
+font-0 = artwiz nu 
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
@@ -44,16 +40,14 @@ modules-right = filesystem
 
 monitor = DVI-I-1
 override-redirect = true
-height = 20
+height = 20 
 width = 100%
 offset-x = 0
 offset-y = 0
 
 padding-right = 2
-border-size = 5
-border-color = ${xrdb:background}
 
-font-0 = artwiz lemon 
+font-0 = artwiz nu 
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
@@ -63,15 +57,13 @@ modules-right = date
 
 monitor = DP-0
 override-redirect = true
-height = 20
+height = 20 
 width = 100%
 offset-x = 0
 offset-y = 0
-border-size = 5
-border-color = ${xrdb:background}
 
 padding-right = 2
-font-0 = artwiz lemon 
+font-0 = artwiz nu 
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
@@ -83,7 +75,7 @@ label-focused = "  %name%  "
 label-occupied = "  %name%  "
 label-empty =
 
-label-focused-background = ${xrdb:color1}
+label-focused-background = ${xrdb:color4}
 label-focused-foreground = ${xrdb:background}
 label-empty-foreground = ${xrdb:background}
 label-occupied-foreground = ${xrdb:foreground}

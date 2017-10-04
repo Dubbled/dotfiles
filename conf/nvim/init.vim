@@ -10,7 +10,7 @@ Plug 'rstacruz/vim-xtract'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'zchee/deoplete-go', {'do': 'make'}
 call plug#end()
-colorscheme desert
+colorscheme industry 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#go#gocode_binary = '$GOPATH/bin/gocode'
 let g:deoplete#sources#go#use_cache = 1

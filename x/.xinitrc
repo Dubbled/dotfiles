@@ -7,4 +7,5 @@ cm start
 xset +fp /usr/share/fonts/artwiz-fonts
 xset fp rehash
 hsetroot -solid "#1e1e1e"
+synergc exodus
 exec bsp 
